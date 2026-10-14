@@ -4,103 +4,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEAVEN CREATED 2 BLOSSOM L.L.C.</title>
+    
+    <!-- Google Fonts for High-End Corporate Typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Montserrat', 'Segoe UI', Helvetica, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #040d24 0%, #0b2265 100%); color: #ffffff; line-height: 1.7; }
-        header { background: radial-gradient(circle, #0b2265 0%, #040d24 100%); color: #ffffff; padding: 60px 20px; text-align: center; border-bottom: 5px solid #d4af37; box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
-        .logo-container { margin-bottom: 25px; }
-        .logo-container img { max-width: 100%; height: auto; width: 480px; border-radius: 12px; border: 3px solid #d4af37; box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
-        header h1 { margin: 20px 0 5px 0; font-size: 3.2em; letter-spacing: 3px; font-weight: 900; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); text-transform: uppercase; }
-        header .tagline { margin: 0; font-size: 1.5em; color: #d4af37; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
-        .container { max-width: 1100px; margin: 50px auto; padding: 0 25px; }
-        .badge-container { text-align: center; margin-bottom: 40px; }
-        .badge { background: rgba(11, 34, 101, 0.85); border: 2px solid #d4af37; color: #ffffff; padding: 14px 28px; display: inline-block; margin: 8px; font-weight: 800; border-radius: 6px; font-size: 0.95em; letter-spacing: 1px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); text-transform: uppercase; }
-        .mission-box { background: rgba(11, 34, 101, 0.9); color: #ffffff; padding: 45px; border-radius: 12px; margin-bottom: 50px; border: 2px solid #d4af37; border-left: 12px solid #d4af37; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        .mission-box h2 { margin-top: 0; color: #d4af37; font-size: 2.2em; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 3px solid #d4af37; padding-bottom: 12px; font-weight: 800; }
-        .mission-box p { font-size: 1.2em; color: #f4f6fa; font-weight: 400; text-shadow: 1px 1px 2px rgba(0,0,0,0.4); }
-        .investor-callout { background: linear-gradient(90deg, #0b2265 0%, #1a367d 100%); border: 3px solid #d4af37; padding: 30px; border-radius: 10px; margin-bottom: 50px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
-        .investor-callout h3 { color: #d4af37; margin-top: 0; font-size: 1.8em; text-transform: uppercase; font-weight: 800; }
-        .investor-callout p { font-size: 1.15em; margin-bottom: 0; font-style: italic; }
-        h2.section-title { color: #d4af37; text-align: center; font-size: 2.6em; margin-top: 70px; text-transform: uppercase; letter-spacing: 3px; font-weight: 900; text-shadow: 3px 3px 6px rgba(0,0,0,0.6); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 35px; margin-top: 40px; }
-        @media (max-width: 650px) { .services-grid { grid-template-columns: 1fr; } }
-        .service-card { background-color: #ffffff; color: #1a1a1a; padding: 40px; border-radius: 12px; border-top: 8px solid #0b2265; border-bottom: 4px solid #d4af37; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        .service-card h3 { margin-top: 0; color: #0b2265; font-size: 1.6em; font-weight: 900; border-bottom: 2px solid #e2e8f0; padding-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .service-card p { font-size: 1.1em; color: #333333; font-weight: 500; }
-        .service-card ul { padding-left: 20px; margin-top: 15px; }
-        .service-card li { margin-bottom: 14px; font-size: 1.05em; color: #222222; font-weight: 400; }
-        .highlight { font-weight: 700; color: #0b2265; }
-        .contact-card { background: radial-gradient(circle, #0b2265 0%, #040d24 100%); border: 3px solid #d4af37; padding: 45px; border-radius: 12px; margin-top: 60px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
-        .contact-card h3 { margin-top: 0; color: #d4af37; font-size: 2.1em; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; }
-        .contact-card p { font-size: 1.25em; color: #ffffff; margin-bottom: 25px; }
-        .action-buttons { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 30px; }
-        .btn { background: linear-gradient(135deg, #d4af37 0%, #aa841c 100%); color: #0b2265; padding: 16px 35px; font-size: 1.1em; font-weight: 900; text-decoration: none; border-radius: 6px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); border: 1px solid #d4af37; transition: all 0.2s ease; }
-        .btn:hover { background: #ffffff; color: #0b2265; border: 1px solid #ffffff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
-        footer { text-align: center; padding: 40px; background-color: #030a1c; color: #718096; font-size: 1em; margin-top: 90px; border-top: 4px solid #d4af37; letter-spacing: 0.5px; }
+        /* Modern Reset & Premium Variables */
+        :root {
+            --bg-main: #030712;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --border-color: rgba(212, 175, 55, 0.2);
+            --gold-primary: #d4af37;
+            --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa841c 100%);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Luxury Background Grid Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(11, 34, 101, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* Hero Wrapper */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px 40px 24px;
+            text-align: center;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 35px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .logo-wrapper img {
+            max-width: 100%;
+            height: auto;
+            width: 220px;
+            border-radius: 50%;
+            border: 2px solid var(--gold-primary);
+            padding: 6px;
+            background: rgba(3, 7, 18, 0.8);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .logo-wrapper img:hover {
+            transform: scale(1.03) rotate(2deg);
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            background: linear-gradient(to right, #ffffff 40%, #f3e5ab 70%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        header .enterprise-tag {
+            font-size: 1.15rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 40px;
+        }
+
+        /* Main Structural Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 100px 24px;
+        }
+
+        /* Credentials Pills Deck */
+        .cred-deck {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .cred-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(12px);
+        }
+
+        .cred-pill span {
+            color: var(--gold-primary);
+        }
+
+        /* Twin Master Panels Layout */
+        .grid-master {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 968px) {
+            .grid-master { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.4rem; }
+        }
+
+        /* Panel Glassmorphism Cards */
+        .panel-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 50px;
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--gold-gradient);
+        }
+
+        .panel-card h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        .panel-card p {
+            color: var(--text-main);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Metric Bullet Framework */
+        .framework-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .framework-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .framework-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+            font-weight: 900;
+        }
+
+        .framework-list strong {
+            color: #ffffff;
+        }
+
+        /* High-Impact Institutional Call to Action Box */
+        .funding-cta {
+            background: linear-gradient(135deg, rgba(11, 34, 101, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 2px solid var(--gold-primary);
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .funding-cta h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .funding-cta p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            font-weight: 300;
+        }
+
+        /* Venture-Grade Interactive Action Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #030712;
+            padding: 18px 45px;
+            font-size: 1rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+            background: #ffffff;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            padding: 18px 45px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Footer Accent */
+        footer {
+            text-align: center;
+            padding: 50px 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #4b5563;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Elite Capital Header Banner -->
     <header>
-        <div class="logo-container">
-            <!-- This exact line connects directly to your uploaded image on your screen -->
-            <img src="image_2ea10e9a.jpg" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Official Crown Logo">
+        <div class="logo-wrapper">
+            <img src="image_2ea10e9a.jpg" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Official Seal">
         </div>
         <h1>HEAVEN CREATED 2 BLOSSOM L.L.C.</h1>
-        <p class="tagline">Blossom’s Legacy Enterprise</p>
+        <div class="enterprise-tag">Blossom's Legacy Enterprise</div>
     </header>
 
     <div class="container">
         
-        <div class="badge-container">
-            <div class="badge">👑 OWNER & FOUNDER: BLOSSOM KALI SNOW</div>
-            <div class="badge">🆔 ORGANIZATION ID: #139775</div>
-            <div class="badge">📋 DVN: #002957439</div>
-            <div class="badge">📍 HQ: 100 NORTH KEENE ST, APT 6, COLUMBIA, MO</div>
+        <!-- Institutional Verification Deck -->
+        <div class="cred-deck">
+            <div class="cred-pill">👑 Founder: <span>Blossom Kali Snow</span></div>
+            <div class="cred-pill">🏛️ Org ID: <span>#139775</span></div>
+            <div class="cred-pill">🔑 DVN: <span>#002957439</span></div>
+            <div class="cred-pill">📍 HQ: <span>Columbia, MO</span></div>
         </div>
 
-        <div class="mission-box">
-            <h2>Our Corporate Foundation & Core Vision</h2>
-            <p><strong>HEAVEN CREATED 2 BLOSSOM L.L.C.</strong> is a multi-branch corporate entity built on an unwavering foundation of community elevation, family advocacy, and premium services. We are not an institutional or holistic organization; we operate with a profound structural core, knowing that the LORD is both hood and holy. We meet individuals, investors, and families exactly where they are, paving paths for community economic growth, structured rehabilitation support, and lifestyle excellence.</p>
-            <p><strong>The Family Pact:</strong> When you partner with any branch of our LLC, we are family now. We walk with you through every step of your journey, creating a mutual framework where your stability and corporate advancement blossom together.</p>
-        </div>
-
-        <div class="investor-callout">
-            <h3>📈 Funding, Sponsorship, & Partnership Opportunities</h3>
-            <p>We are actively building strategic relationships with community partners, institutional donors, and private investors who want to pour resources into verified, impactful community lifelines. Contact our administrative offices below to request our complete corporate prospectus or sponsorship documentation.</p>
-        </div>
-
-        <h2 class="section-title">Our Complete Corporate Operations</h2>
-        
-        <div class="services-grid">
+        <!-- Corporate Profile Layout -->
+        <div class="grid-master">
             
-            <div class="service-card">
-                <h3>1. Community Outreach & Mentorship</h3>
-                <p>Operating under our direct outreach banner, we provide boots-on-the-ground support and case advocacy for vulnerable families, youth intervention programs, and independent regional resources.</p>
-                <ul>
-                    <li><span class="highlight">Juvenile Advocacy & Diversion:</span> Specialized intervention dedicated to providing a safe haven that keeps kids completely out of the system.</li>
-                    <li><span class="highlight">Court & DFS Liaison Support:</span> Assisting families with casework navigation, documentation, and structural community re-entry.</li>
-                    <li><span class="highlight">Resource Distribution:</span> Linking regional families with food banks, mobile appointment routing, and application filings.</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>2. Childcare Providers & Development</h3>
-                <p>An independent, premium 24/7 home-based development environment limited strictly to six (6) or fewer children to guarantee focused early childhood milestone development.</p>
-                <ul>
-                    <li><span class="highlight">24/7 Shift Accessibility:</span> Open 24 hours a day, 7 days a week, 365 days a year to fully support shift workers, responders, and students.</li>
-                    <li><span class="highlight">Subsidy Acceptance:</span> Dedicated placement slots prioritized for families receiving state childcare assistance.</li>
-                    <li><span class="highlight">Mobile Drop-Off:</span> Premium door-to-door transportation and outreach transit run independently outside of standard state subsidy frames.</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>3. Event & Party Planning</h3>
-                <p>Transforming visions into reality with professional, high-standard coordination for community events, private family milestones, corporate gatherings, and celebration designs.</p>
-                <ul>
-                    <li><span class="highlight">Full-Scale Design:</span> Custom theme layout curation, balloon arches, and custom structural aesthetic staging.</li>
-                    <li><span class="highlight">Vendor Management:</span> Direct logistics handling, timeline scheduling, and on-site day-of corporate execution.</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <h3>4. Business Expansion & Development Consultations</h3>
+            <!-- Left Wing: Core Foundation -->
+            <div class="panel-card">
+                <h2>Our Corporate Foundation & Core Vision</h2>
+                
