@@ -5,75 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEAVEN CREATED 2 BLOSSOM L.L.C.</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333333; line-height: 1.6; }
-        header { background-color: #0b2265; color: #ffffff; padding: 40px 20px; text-align: center; border-bottom: 5px solid #d4af37; }
-        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
-        header p { margin: 10px 0 0 0; font-size: 1.2em; color: #d4af37; font-weight: bold; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .badge-container { text-align: center; margin-bottom: 30px; }
-        .badge { background-color: #f4f6fa; border: 1px solid #0b2265; padding: 10px 20px; display: inline-block; margin: 5px; font-weight: bold; border-radius: 4px; font-size: 0.9em; }
-        .mission-box { background-color: #0b2265; color: #ffffff; padding: 30px; border-radius: 8px; margin-bottom: 40px; border-left: 8px solid #d4af37; }
-        .mission-box h2 { margin-top: 0; color: #d4af37; }
-        h2 { color: #0b2265; border-bottom: 2px solid #f4f6fa; padding-bottom: 10px; margin-top: 30px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #061233; color: #ffffff; line-height: 1.6; }
+        header { background-color: #0b2265; color: #ffffff; padding: 50px 20px; text-align: center; border-bottom: 5px solid #d4af37; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .logo-container { margin-bottom: 25px; }
+        .logo-container img { max-width: 100%; height: auto; width: 450px; border-radius: 8px; border: 3px solid #d4af37; box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+        header h1 { margin: 15px 0 0 0; font-size: 3em; letter-spacing: 2px; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        header p { margin: 5px 0 0 0; font-size: 1.4em; color: #d4af37; font-weight: bold; text-transform: uppercase; letter-spacing: 3px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .container { max-width: 1050px; margin: 40px auto; padding: 0 20px; }
+        .badge-container { text-align: center; margin-bottom: 35px; }
+        .badge { background-color: #0b2265; border: 2px solid #d4af37; color: #ffffff; padding: 12px 24px; display: inline-block; margin: 6px; font-weight: bold; border-radius: 4px; font-size: 0.95em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .mission-box { background-color: #0b2265; color: #ffffff; padding: 40px; border-radius: 8px; margin-bottom: 40px; border: 2px solid #d4af37; border-left: 10px solid #d4af37; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+        .mission-box h2 { margin-top: 0; color: #d4af37; font-size: 2em; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; }
+        .mission-box p { font-size: 1.1em; }
+        h2.section-title { color: #d4af37; text-align: center; font-size: 2.4em; margin-top: 60px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-top: 40px; }
+        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+        .service-card { background-color: #ffffff; color: #222222; padding: 35px; border-radius: 8px; border-top: 6px solid #d4af37; border-left: 1px solid #d4af37; border-right: 1px solid #d4af37; border-bottom: 1px solid #d4af37; box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
+        .service-card h3 { margin-top: 0; color: #0b2265; font-size: 1.5em; font-weight: 800; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .service-card p { font-size: 1.05em; color: #444444; }
+        .service-card ul { padding-left: 20px; }
+        .service-card li { margin-bottom: 12px; font-size: 1em; color: #333333; }
         .highlight { font-weight: bold; color: #0b2265; }
-        .contact-card { background-color: #fdfaf2; border: 2px solid #d4af37; padding: 30px; border-radius: 8px; margin-top: 40px; }
-        .contact-card h3 { margin-top: 0; color: #0b2265; }
-        footer { text-align: center; padding: 30px; background-color: #f4f6fa; color: #666666; font-size: 0.9em; margin-top: 60px; border-top: 1px solid #e2e8f0; }
+        .contact-card { background-color: #0b2265; border: 3px solid #d4af37; padding: 40px; border-radius: 8px; margin-top: 50px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+        .contact-card h3 { margin-top: 0; color: #d4af37; font-size: 1.8em; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-card p { font-size: 1.15em; color: #ffffff; margin-bottom: 20px; }
+        .action-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+        .btn { background-color: #d4af37; color: #0b2265; padding: 15px 30px; font-size: 1.1em; font-weight: bold; text-decoration: none; border-radius: 6px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.2s ease; }
+        .btn:hover { background-color: #ffffff; color: #0b2265; transform: translateY(-2px); }
+        footer { text-align: center; padding: 35px; background-color: #040d24; color: #888888; font-size: 0.95em; margin-top: 80px; border-top: 3px solid #d4af37; }
     </style>
 </head>
 <body>
 
     <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Official Crown Logo">
+        </div>
         <h1>HEAVEN CREATED 2 BLOSSOM L.L.C.</h1>
-        <p>Doing Business As: Blossom’s Legacy</p>
+        <p>Blossom’s Legacy Enterprise</p>
     </header>
 
     <div class="container">
         
         <div class="badge-container">
-            <div class="badge">Organization ID: #139775</div>
-            <div class="badge">DVN: #002957439</div>
-            <div class="badge">Boone County / Columbia, MO</div>
+            <div class="badge">👑 STATE CERTIFIED MULTI-MEMBER LLC</div>
+            <div class="badge">🆔 ORGANIZATION ID: #139775</div>
+            <div class="badge">📋 DVN: #002957439</div>
+            <div class="badge">📍 COLUMBIA, MO (BOONE COUNTY)</div>
         </div>
 
         <div class="mission-box">
-            <h2>Our Core Mission & Partnership</h2>
-            <p>We operate a specialized, family-centered, 24/7 home-based childcare and youth advocacy program in Columbia, Missouri. Our program is not Christian or institutional; we are centered on knowing that the LORD is both hood and holy. We meet families exactly where they are at, providing a high-quality, structured, and nurturing safe haven designed to build children up, support working parents, and keep youth safely supported within the community.</p>
-            <p><strong>The Family Pact:</strong> When you join our program, we are family now. We are here with you every single step of the way, creating a mutual partnership where we support your household's stability, advocacy needs, and growth. We are dedicated to helping you and your family grow as you help us and our family grow.</p>
+            <h2>Our Corporate Foundation & Core Vision</h2>
+            <p><strong>HEAVEN CREATED 2 BLOSSOM L.L.C.</strong> is a multi-branch corporate entity built on an unwavering foundation of community elevation, family advocacy, and premium services. We are not an institutional or holistic organization; we operate with a profound structural core, knowing that the LORD is both hood and holy. We meet individuals and families exactly where they are, paving paths for community economic growth, structured rehabilitation support, and lifestyle excellence.</p>
+            <p><strong>The Family Pact:</strong> When you partner with any branch of our LLC, we are family now. We walk with you through every step of your journey, creating a mutual framework where your stability and corporate advancement blossom together.</p>
         </div>
 
-        <h2>Premium Program Features</h2>
-        <ul>
-            <li><span class="highlight">24/7 Continuous Care:</span> Open 24 hours a day, 7 days a week, 365 days a year to accommodate shift workers, emergency responders, and student schedules.</li>
-            <li><span class="highlight">State Subsidy Welcome:</span> We give immediate enrollment priority to families receiving Missouri State Child Care Subsidy Assistance.</li>
-            <li><span class="highlight">Premium Door-to-Door Transportation:</span> Personalized pickup and drop-off mobile outreach services available independently for a flat $100 monthly family fee.</li>
-            <li><span class="highlight">Milestone Tracking:</span> Proudly implementing the CDC's "Learn the Signs. Act Early." developmental framework.</li>
-            <li><span class="highlight">Emergency On-Site Quarantine:</span> A unique two-staff isolation protocol with modified rest curriculum so parents never have to miss mandatory workplace shifts during sudden household emergencies.</li>
-        </ul>
+        <h2 class="section-title">Our Complete Corporate Operations</h2>
+        
+        <div class="services-grid">
+            
+            <!-- BRANCH 1: FAMILY ADVOCACY & OUTREACH -->
+            <div class="service-card">
+                <h3>1. Community Outreach & Family Advocacy</h3>
+                <p>Operating under our direct outreach banner, we provide boots-on-the-ground support and case advocacy for vulnerable families, youth intervention programs, and independent regional resources.</p>
+                <ul>
+                    <li><span class="highlight">Welfare System Prevention:</span> Specialized advocacy dedicated to providing a safe haven that keeps children out of institutional welfare tracking structures.</li>
+                    <li><span class="highlight">Court & DFS Liaison Support:</span> Assisting families with casework navigation, documentation, and structural community re-entry.</li>
+                    <li><span class="highlight">Resource Distribution:</span> Linking regional families with food banks, mobile appointment routing, and application filings.</li>
+                </ul>
+            </div>
 
-        <h2>Safety & Operational Compliance</h2>
-        <ul>
-            <li>Strict adherence to American Academy of Pediatrics infant safe sleep mandates (100% bare sleep spaces, flat on back).</li>
-            <li>Comprehensive written emergency evacuation routing posted inside our spacious 2-bed, 2-bath layout.</li>
-            <li>Fully equipped on-site safety protections, including a mounted Class ABC fire extinguisher and certified child-height safety outlet caps.</li>
-            <li>Staff holds active Missouri Department of Corrections Training Academy level 3 tactical credentials and Mandated Reporter status.</li>
-        </ul>
+            <!-- BRANCH 2: 24/7 CHILDCARE INFRASTRUCTURE -->
+            <div class="service-card">
+                <h3>2. 24/7 Family Child Care Home</h3>
+                <p>An independent, premium home-based development environment limited strictly to six (6) or fewer children to guarantee focused early childhood milestone development.</p>
+                <ul>
+                    <li><span class="highlight">24/7 Shift Accessibility:</span> Open 24 hours a day, 7 days a week, 365 days a year to fully support shift workers, responders, and students.</li>
+                    <li><span class="highlight">Subsidy Acceptance:</span> Dedicated placement slots prioritized for families receiving state childcare assistance.</li>
+                    <li><span class="highlight">Mobile Drop-Off:</span> Premium door-to-door transportation and outreach transit run independently outside of standard state subsidy frames.</li>
+                </ul>
+            </div>
 
-        <div class="contact-card">
-            <h3>Secure Administrative Communications</h3>
-            <p>To ensure a strict legal paper trail and preserve complete operational compliance, all formal inquiries, enrollments, and placement requests must be submitted in writing.</p>
-            <p><strong>Operational Location:</strong> 100 North Keene Street, Apartment 6, Columbia, Missouri 65201</p>
-            <p><strong>Secure Corporate Email:</strong> <a href="mailto:fountainroyal80@gmail.com">fountainroyal80@gmail.com</a></p>
-            <p><strong>Secure Corporate Phone:</strong> (442) 225-3747</p>
-        </div>
+            <!-- BRANCH 3: EVENT PLANNING -->
+            <div class="service-card">
+                <h3>3. Premium Event & Party Planning</h3>
+                <p>Transforming visions into reality with professional, high-standard coordination for community events, private family milestones, corporate gatherings, and celebration designs.</p>
+                <ul>
+                    <li><span class="highlight">Full-Scale Design:</span> Custom theme layout curation, balloon arches, and custom structural aesthetic staging.</li>
+                    <li><span class="highlight">Vendor Management:</span> Direct logistics handling, timeline scheduling, and on-site day-of corporate execution.</li>
+                    <li><span class="highlight">Community Celebrations:</span> Curating structured events that promote family unity and local business networking.</li>
+                </ul>
+            </div>
 
-    </div>
+            <!-- BRANCH 4: CLEANING SERVICES -->
+            <div class="service-card">
+                <h3>4. Professional Mobile Cleaning Services</h3>
+                <p>Delivering top-tier residential and commercial sanitization lines to maintain premium environments for local offices, apartments, and active childcare spaces.</p>
+                <ul>
+                    <li><span class="highlight">Sanitization Standards:</span> Implementing rigorous infection-control deep cleans matching strict safety frameworks.</li>
+                    <li><span class="highlight">Flexible Contracts:</span> Offering recurring commercial contracts, one-time move-out cleans, and emergency turnaround cleanings.</li>
+                    <li><span class="highlight">Family-Safe Products:</span> Utilizing reliable solutions that guarantee spotless results without toxic residues.</li>
+                </ul>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 HEAVEN CREATED 2 BLOSSOM L.L.C. | Blossom's Legacy. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <!-- BRANCH 5: MODELING PROGRAM -->
+            <div class="service-card" style="grid-column: 1 / -1;">
+                <h3>5. Corporate Media & Youth Modeling Program</h3>
+                <p>Building our LLC brand footprint completely on authentic community representation. We actively manage professional modeling placement to elevate brand visuals across our digital networks.</p>
