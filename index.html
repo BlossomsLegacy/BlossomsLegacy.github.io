@@ -1,53 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HEAVEN CREATED 2 BLOSSOM L.L.C.</title>
-<link href="https://googleapis.com" rel="stylesheet">
-<style>
-:root { --bg-main: #040d24; --bg-card: rgba(11, 34, 101, 0.6); --border-gold: #d4af37; --text-white: #ffffff; --text-gold: #d4af37; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: linear-gradient(135deg, #040d24 0%, #0b2265 100%); color: var(--text-white); line-height: 1.7; padding-bottom: 80px; }
-header { background: radial-gradient(circle, #0b2265 0%, #040d24 100%); padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--border-gold); box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
-.logo-container { margin-bottom: 25px; }
-.logo-container img { max-width: 100%; height: auto; width: 320px; border-radius: 12px; border: 3px solid var(--border-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
-header h1 { font-family: 'Cinzel', serif; margin: 20px 0 5px 0; font-size: 3rem; letter-spacing: 2px; font-weight: 900; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); text-transform: uppercase; }
-header .tagline { margin: 0; font-size: 1.4rem; color: var(--text-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 4px; }
-.container { max-width: 1200px; margin: 50px auto; padding: 0 24px; }
-.cred-deck { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
-.cred-badge { background: rgba(3, 7, 18, 0.6); border: 2px solid var(--border-gold); padding: 12px 24px; font-weight: 800; border-radius: 6px; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
-.cred-badge span { color: var(--text-gold); }
-.mission-box { background: var(--bg-card); padding: 45px; border-radius: 12px; margin-bottom: 50px; border: 2px solid var(--border-gold); border-left: 12px solid var(--border-gold); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-.mission-box h2 { font-family: 'Cinzel', serif; color: var(--text-gold); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 20px; border-bottom: 3px solid var(--border-gold); padding-bottom: 12px; }
-.mission-box p { font-size: 1.25rem; font-weight: 400; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 40px; }
-.service-card { background-color: #ffffff; color: #1a1a1a; padding: 40px; border-radius: 12px; border-top: 8px solid #0b2265; border-bottom: 4px solid var(--border-gold); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-.service-card h3 { color: #0b2265; font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-.service-card p { font-size: 1.1rem; color: #333333; margin-bottom: 15px; }
-.service-card ul { padding-left: 20px; }
-.service-card li { margin-bottom: 10px; font-size: 1.05rem; color: #222222; }
-.highlight { font-weight: 700; color: #0b2265; }
-.funding-cta { background: radial-gradient(circle, #0b2265 0%, #040d24 100%); border: 3px solid var(--border-gold); padding: 55px; border-radius: 12px; margin-top: 60px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
-.funding-cta h3 { font-family: 'Cinzel', serif; color: var(--text-gold); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 20px; }
-.funding-cta p { font-size: 1.25rem; margin-bottom: 35px; }
-.action-buttons { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
-.btn { background: linear-gradient(135deg, #d4af37 0%, #aa841c 100%); color: #040d24; padding: 16px 40px; font-size: 1.1rem; font-weight: 900; text-decoration: none; border-radius: 6px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); transition: all 0.2s ease; display: inline-block; }
-.btn:hover { background: #ffffff; color: #0b2265; transform: translateY(-2px); }
-footer { text-align: center; padding: 40px; color: #718096; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAVEN CREATED 2 BLOSSOM L.L.C. | Executive Presentation</title>
+    <style>
+        :root {
+            --royal-blue: #0a1f4d;
+            --deep-obsidian: #050b18;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-light: #ffffff;
+            --text-muted: #a2b4d6;
+            --surface: #0e1e38;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', 'Segoe UI', serif;
+        }
+
+        body {
+            background-color: var(--deep-obsidian);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(180deg, var(--royal-blue), var(--deep-obsidian));
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+            position: relative;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .logo-wrapper img {
+            max-width: 100%;
+            width: 650px;
+            height: auto;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 2.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .enterprise-tag {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .motto {
+            font-style: italic;
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .vision-section {
+            background: var(--surface);
+            border: 1px solid var(--gold);
+            border-radius: 16px;
+            padding: 45px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .vision-text {
+            font-size: 1.2rem;
+            color: #f0f4fc;
+            margin-bottom: 0;
+        }
+
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .matrix-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .matrix-box {
+            background: var(--surface);
+            border: 1px solid var(--gold);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .list-item {
+            background: rgba(10, 31, 77, 0.4);
+            border-left: 4px solid var(--gold);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+            list-style: none;
+        }
+
+        .list-item strong {
+            color: var(--gold-light);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .list-item p {
+            color: #e2e8f5;
+            font-size: 1.05rem;
+        }
+
+        .leadership-bar {
+            background: linear-gradient(90deg, var(--surface), var(--royal-blue));
+            border: 1px solid var(--gold);
+            padding: 25px 40px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .leader-title {
+            font-size: 1.4rem;
+            color: #ffffff;
+        }
+
+        .leader-title span {
+            color: var(--gold);
+            font-weight: bold;
+            display: block;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+
+        .funding-panel {
+            background: radial-gradient(circle at center, var(--surface), var(--deep-obsidian));
+            border: 2px solid var(--gold);
+            padding: 50px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+        }
+
+        .funding-panel p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: #f0f4fc;
+        }
+
+        .action-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn-executive {
+            background: linear-gradient(135deg, var(--gold), #aa841c);
+            color: var(--deep-obsidian);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid var(--gold);
+        }
+
+        .btn-executive:hover {
+            background: #ffffff;
+            color: var(--deep-obsidian);
+            box-shadow: 0 0 25px var(--gold);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
-<header><div class="logo-container"><img src="image_2ea10e9a.jpg" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Seal"></div><h1>HEAVEN CREATED 2 BLOSSOM L.L.C.</h1><div class="tagline">Blossom's Legacy Enterprise</div></header>
-<div class="container">
-<div class="cred-deck"><div class="cred-badge">👑 Owner: <span>Blossom Kali Snow</span></div><div class="cred-badge">🏛️ ID: <span>#139775</span></div><div class="cred-badge">🔑 DVN: <span>#002957439</span></div><div class="cred-badge">📍 HQ: <span>Columbia, MO</span></div></div>
-<section class="mission-box"><h2>Our Corporate Foundation & Core Vision</h2><p>HEAVEN CREATED 2 BLOSSOM L.L.C. is an elite multi-branch corporate entity structurally engineered to provide exceptional family resources, strategic development, and vital community infrastructure. Built on an unwavering foundation of operational excellence, our organization specializes in executing multi-tier operations designed to cultivate long-term growth and sustainable community legacies to support the Lord's work.</p></section>
-<div class="services-grid">
-<div class="service-card"><h3>Safe Haven Group Childcare</h3><p>Providing pristine, structured, and secure 24-hour, 7-day-a-week childcare services designed to actively support families and protect children from structural vulnerabilities.</p><ul><li><span class="highlight">Availability:</span> Comprehensive 24/7/365 scheduling structures.</li><li><span class="highlight">State Assistance:</span> Proudly working with clients receiving subsidy assistance.</li><li><span class="highlight">Logistics:</span> Reliable pickup and drop-off transportation operations.</li></ul></div>
-<div class="service-card"><h3>Family Outreach & Advocacy</h3><p>Deploying dedicated resources, structural paper trails, and active community outreach initiatives to keep children out of the child welfare system and protect parental rights.</p><ul><li><span class="highlight">Mandated Reporting:</span> Crisis navigation and objective compliance documentation.</li><li><span class="highlight">Support Networks:</span> Directly transporting families to critical appointments and food banks.</li></ul></div>
-</div>
-<section class="funding-cta"><h3>Partner With Our Enterprise</h3><p>We invite community partners, sponsors, and strategic networks to align with our expanding operations. Let's build a lasting blueprint for corporate growth and community safety together.</p><div class="action-buttons"><a href="mailto:fountainroyal80@gmail.com" class="btn">Email Executive Office</a></div></section>
-</div>
-<footer><p>&copy; 2026 HEAVEN CREATED 2 BLOSSOM L.L.C. All Rights Reserved.</p></footer>
-</body>
-</html>
+
+    <header>
+        <div class="logo-wrapper">
+            <img src="image__xidz0.png" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Royal Crown Logo">
+        </div>
+        <h1>HEAVEN CREATED 2 BLOSSOM L.L.C.</h1>
+        <div class="enterprise-tag">Blossom's Legacy Enterprise</div>
+        <div class="motto">In Faith We Blossom</div>
+    </header>
+
+    <div class="container">
+
+        <section class="vision-section">
+            <h2>Our Corporate Foundation & Core Vision</h2>
+            <p class="vision-text">
+                HEAVEN CREATED 2 BLOSSOM L.L.C. is an elite multi-branch corporate entity structurally engineered to deliver premium family resources, high-level operational development, and vital community infrastructure. Rooted in absolute operational precision and community stability, our organization designs and deploys targeted, multi-tier programs built to cultivate sustainable local growth, secure generational protection, and build lasting structural legacies to support the LORD'S work.
+            </p>
+        </section>
+
+        <div class="matrix-grid">
+            
+            <section class="matrix-box">
+                <h2>Our Corporate Services</h2>
+                <ul>
+                    <li class="list-item">
+                        <strong>Community Outreach & Mentorship</strong>
+                        <p>Providing direct street-level engagement, crisis intervention, and strategic structural assistance to stabilize families and elevate local resources.</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>Childcare Providers & Development</strong>
+                        <p>Operating an elite, secure, round-the-clock 24/7/365 infrastructure specifically tailored to accommodate state subsidy assistance and provide premium youth placement.</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>Business Expansion & Development Consultations</strong>
+                        <p>Delivering strategic operational frameworks, brand asset consulting, and structural setup for expanding independent community initiatives.</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>Event & Party Planning</strong>
+                        <p>Designing high-tier, professional community outreach showcases, corporate events, and formal community group meetings.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="matrix-box">
+                <h2>Our Corporate Credentials</h2>
+                <ul>
+                    <li class="list-item">
+                        <strong>Active Corrections Officer Certification</strong>
+                        <p>State-certified training in advanced tactical force application, crisis negotiation, high-security operations, and protective custody standards.</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>Certified Nursing Assistant (CNA)</strong>
+                        <p>Clinical experience handling level-two cognitive impairment sectors, advanced medical logistics, and specialized institutional medical care.</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>Juvenile Advocacy & Diversion</strong>
+                        <p>Dedicated operational framework focused exclusively on keeping kids out of the system, breaking structural loops, and establishing secure safe havens.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="leadership-bar">
+            <div class="leader-title">
+                <span>Blossom Kali Snow</span>
+                
