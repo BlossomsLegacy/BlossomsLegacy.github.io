@@ -1,298 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEAVEN CREATED 2 BLOSSOM L.L.C.</title>
-    
-    <!-- Premium Professional Fonts -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-main: #040d24;
-            --bg-card: rgba(11, 34, 101, 0.6);
-            --border-gold: #d4af37;
-            --text-white: #ffffff;
-            --text-gold: #d4af37;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, #040d24 0%, #0b2265 100%);
-            color: var(--text-white);
-            line-height: 1.7;
-            padding-bottom: 80px;
-        }
-
-        header {
-            background: radial-gradient(circle, #0b2265 0%, #040d24 100%);
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--border-gold);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-        }
-
-        .logo-container {
-            margin-bottom: 25px;
-        }
-
-        .logo-container img {
-            max-width: 100%;
-            height: auto;
-            width: 320px;
-            border-radius: 12px;
-            border: 3px solid var(--border-gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-        }
-
-        header h1 {
-            font-family: 'Cinzel', serif;
-            margin: 20px 0 5px 0;
-            font-size: 3rem;
-            letter-spacing: 2px;
-            font-weight: 900;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
-            text-transform: uppercase;
-        }
-
-        header .tagline {
-            margin: 0;
-            font-size: 1.4rem;
-            color: var(--text-gold);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 24px;
-        }
-
-        /* Credentials Deck */
-        .cred-deck {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-
-        .cred-badge {
-            background: rgba(3, 7, 18, 0.6);
-            border: 2px solid var(--border-gold);
-            padding: 12px 24px;
-            font-weight: 800;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .cred-badge span {
-            color: var(--text-gold);
-        }
-
-        /* Corporate Foundation / Mission */
-        .mission-box {
-            background: var(--bg-card);
-            padding: 45px;
-            border-radius: 12px;
-            margin-bottom: 50px;
-            border: 2px solid var(--border-gold);
-            border-left: 12px solid var(--border-gold);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        .mission-box h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--text-gold);
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            border-bottom: 3px solid var(--border-gold);
-            padding-bottom: 12px;
-        }
-
-        .mission-box p {
-            font-size: 1.25rem;
-            font-weight: 400;
-        }
-
-        /* Services Architecture Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .service-card {
-            background-color: #ffffff;
-            color: #1a1a1a;
-            padding: 40px;
-            border-radius: 12px;
-            border-top: 8px solid #0b2265;
-            border-bottom: 4px solid var(--border-gold);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        .service-card h3 {
-            color: #0b2265;
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 1.1rem;
-            color: #333333;
-            margin-bottom: 15px;
-        }
-
-        .service-card ul {
-            padding-left: 20px;
-        }
-
-        .service-card li {
-            margin-bottom: 10px;
-            font-size: 1.05rem;
-            color: #222222;
-        }
-
-        .highlight {
-            font-weight: 700;
-            color: #0b2265;
-        }
-
-        /* High-Impact Partnership CTA */
-        .funding-cta {
-            background: radial-gradient(circle, #0b2265 0%, #040d24 100%);
-            border: 3px solid var(--border-gold);
-            padding: 55px;
-            border-radius: 12px;
-            margin-top: 60px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-        }
-
-        .funding-cta h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--text-gold);
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .funding-cta p {
-            font-size: 1.25rem;
-            margin-bottom: 35px;
-        }
-
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #d4af37 0%, #aa841c 100%);
-            color: #040d24;
-            padding: 16px 40px;
-            font-size: 1.1rem;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-            transition: all 0.2s ease;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: #ffffff;
-            color: #0b2265;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #718096;
-            margin-top: 80px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEAVEN CREATED 2 BLOSSOM L.L.C.</title>
+<link href="https://googleapis.com" rel="stylesheet">
+<style>
+:root { --bg-main: #040d24; --bg-card: rgba(11, 34, 101, 0.6); --border-gold: #d4af37; --text-white: #ffffff; --text-gold: #d4af37; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: linear-gradient(135deg, #040d24 0%, #0b2265 100%); color: var(--text-white); line-height: 1.7; padding-bottom: 80px; }
+header { background: radial-gradient(circle, #0b2265 0%, #040d24 100%); padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--border-gold); box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+.logo-container { margin-bottom: 25px; }
+.logo-container img { max-width: 100%; height: auto; width: 320px; border-radius: 12px; border: 3px solid var(--border-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
+header h1 { font-family: 'Cinzel', serif; margin: 20px 0 5px 0; font-size: 3rem; letter-spacing: 2px; font-weight: 900; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); text-transform: uppercase; }
+header .tagline { margin: 0; font-size: 1.4rem; color: var(--text-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 4px; }
+.container { max-width: 1200px; margin: 50px auto; padding: 0 24px; }
+.cred-deck { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
+.cred-badge { background: rgba(3, 7, 18, 0.6); border: 2px solid var(--border-gold); padding: 12px 24px; font-weight: 800; border-radius: 6px; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+.cred-badge span { color: var(--text-gold); }
+.mission-box { background: var(--bg-card); padding: 45px; border-radius: 12px; margin-bottom: 50px; border: 2px solid var(--border-gold); border-left: 12px solid var(--border-gold); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+.mission-box h2 { font-family: 'Cinzel', serif; color: var(--text-gold); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 20px; border-bottom: 3px solid var(--border-gold); padding-bottom: 12px; }
+.mission-box p { font-size: 1.25rem; font-weight: 400; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 40px; }
+.service-card { background-color: #ffffff; color: #1a1a1a; padding: 40px; border-radius: 12px; border-top: 8px solid #0b2265; border-bottom: 4px solid var(--border-gold); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+.service-card h3 { color: #0b2265; font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+.service-card p { font-size: 1.1rem; color: #333333; margin-bottom: 15px; }
+.service-card ul { padding-left: 20px; }
+.service-card li { margin-bottom: 10px; font-size: 1.05rem; color: #222222; }
+.highlight { font-weight: 700; color: #0b2265; }
+.funding-cta { background: radial-gradient(circle, #0b2265 0%, #040d24 100%); border: 3px solid var(--border-gold); padding: 55px; border-radius: 12px; margin-top: 60px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+.funding-cta h3 { font-family: 'Cinzel', serif; color: var(--text-gold); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 20px; }
+.funding-cta p { font-size: 1.25rem; margin-bottom: 35px; }
+.action-buttons { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+.btn { background: linear-gradient(135deg, #d4af37 0%, #aa841c 100%); color: #040d24; padding: 16px 40px; font-size: 1.1rem; font-weight: 900; text-decoration: none; border-radius: 6px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); transition: all 0.2s ease; display: inline-block; }
+.btn:hover { background: #ffffff; color: #0b2265; transform: translateY(-2px); }
+footer { text-align: center; padding: 40px; color: #718096; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); }
+</style>
 </head>
 <body>
-
-    <!-- Executive Header Section -->
-    <header>
-        <div class="logo-container">
-            <img src="image_2ea10e9a.jpg" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Official Seal">
-        </div>
-        <h1>HEAVEN CREATED 2 BLOSSOM L.L.C.</h1>
-        <div class="tagline">Blossom's Legacy Enterprise</div>
-    </header>
-
-    <div class="container">
-        
-        <!-- Corporate Credentials Deck -->
-        <div class="cred-deck">
-            <div class="cred-badge">👑 Owner & Founder: <span>Blossom Kali Snow</span></div>
-            <div class="cred-badge">🏛️ Organization ID: <span>#139775</span></div>
-            <div class="cred-badge">🔑 DVN: <span>#002957439</span></div>
-            <div class="cred-badge">📍 HQ: <span>Columbia, MO</span></div>
-        </div>
-
-        <!-- Corporate Foundation Section -->
-        <section class="mission-box">
-            <h2>Our Corporate Foundation & Core Vision</h2>
-            <p>HEAVEN CREATED 2 BLOSSOM L.L.C. is an elite multi-branch corporate entity structurally engineered to provide exceptional family resources, strategic development, and vital community infrastructure. Built on an unwavering foundation of operational excellence, our organization specializes in executing multi-tier operations designed to cultivate long-term growth and sustainable community legacies.</p>
-        </section>
-
-        <!-- Dynamic Operations Grid -->
-        <div class="services-grid">
-            
-            <!-- Branch 1: Safe Haven Childcare -->
-            <div class="service-card">
-                <h3>Safe Haven Group Childcare</h3>
-                <p>Providing pristine, structured, and secure 24-hour, 7-day-a-week childcare services designed to actively support families and protect children from structural vulnerabilities.</p>
-                <ul>
-                    <li><span class="highlight">Availability:</span> Comprehensive 24/7/365 scheduling structures.</li>
-                    <li><span class="highlight">State Assistance:</span> Proudly working with clients receiving subsidy assistance.</li>
-                    <li><span class="highlight">Logistics:</span> Reliable pickup and drop-off transportation operations.</li>
-                </ul>
-            </div>
-
-            <!-- Branch 2: Community Outreach & Advocacy -->
-            <div class="service-card">
-                <h3>Family Outreach & Advocacy</h3>
-                <p>Deploying dedicated resources, structural paper trails, and active community outreach initiatives to keep children out of the child welfare system and protect parental rights.</p>
-                <ul>
-                    <li><span class="highlight">Mandated Reporting:</span> Crisis navigation and objective compliance documentation.</li>
-                    <li><span class="highlight">Support Networks:</span> Directly transporting families to critical appointments and food banks.</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- Institutional Capital & Contact Section -->
-        <section class="funding-cta">
-            <h3>Partner With Our Enterprise</h3>
-            <p>We invite community partners, sponsors, and strategic networks to align with our expanding operations. Let's build a lasting blueprint for corporate growth and community safety together.</p>
-            <div class="action-buttons">
+<header><div class="logo-container"><img src="image_2ea10e9a.jpg" alt="HEAVEN CREATED 2 BLOSSOM L.L.C. Seal"></div><h1>HEAVEN CREATED 2 BLOSSOM L.L.C.</h1><div class="tagline">Blossom's Legacy Enterprise</div></header>
+<div class="container">
+<div class="cred-deck"><div class="cred-badge">👑 Owner: <span>Blossom Kali Snow</span></div><div class="cred-badge">🏛️ ID: <span>#139775</span></div><div class="cred-badge">🔑 DVN: <span>#002957439</span></div><div class="cred-badge">📍 HQ: <span>Columbia, MO</span></div></div>
+<section class="mission-box"><h2>Our Corporate Foundation & Core Vision</h2><p>HEAVEN CREATED 2 BLOSSOM L.L.C. is an elite multi-branch corporate entity structurally engineered to provide exceptional family resources, strategic development, and vital community infrastructure. Built on an unwavering foundation of operational excellence, our organization specializes in executing multi-tier operations designed to cultivate long-term growth and sustainable community legacies to support the Lord's work.</p></section>
+<div class="services-grid">
+<div class="service-card"><h3>Safe Haven Group Childcare</h3><p>Providing pristine, structured, and secure 24-hour, 7-day-a-week childcare services designed to actively support families and protect children from structural vulnerabilities.</p><ul><li><span class="highlight">Availability:</span> Comprehensive 24/7/365 scheduling structures.</li><li><span class="highlight">State Assistance:</span> Proudly working with clients receiving subsidy assistance.</li><li><span class="highlight">Logistics:</span> Reliable pickup and drop-off transportation operations.</li></ul></div>
+<div class="service-card"><h3>Family Outreach & Advocacy</h3><p>Deploying dedicated resources, structural paper trails, and active community outreach initiatives to keep children out of the child welfare system and protect parental rights.</p><ul><li><span class="highlight">Mandated Reporting:</span> Crisis navigation and objective compliance documentation.</li><li><span class="highlight">Support Networks:</span> Directly transporting families to critical appointments and food banks.</li></ul></div>
+</div>
+<section class="funding-cta"><h3>Partner With Our Enterprise</h3><p>We invite community partners, sponsors, and strategic networks to align with our expanding operations. Let's build a lasting blueprint for corporate growth and community safety together.</p><div class="action-buttons"><a href="mailto:fountainroyal80@gmail.com" class="btn">Email Executive Office</a></div></section>
+</div>
+<footer><p>&copy; 2026 HEAVEN CREATED 2 BLOSSOM L.L.C. All Rights Reserved.</p></footer>
+</body>
+</html>
