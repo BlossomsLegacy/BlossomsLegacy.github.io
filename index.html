@@ -1,1 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#351b35">
+  <meta name="description" content="Heaven Created 2 Blossom L.L.C. — Blossoms Legacy. Faith, family support, community outreach, and opportunities to grow.">
+  <title>Blossoms Legacy | Heaven Created 2 Blossom L.L.C.</title>
+
+  <style>
+    :root {
+      --plum: #351b35;
+      --plum-light: #59364f;
+      --gold: #d5b477;
+      --ivory: #fffaf0;
+      --cream: #f4eadb;
+      --ink: #30252e;
+      --muted: #71656e;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--ivory);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+    img { max-width: 100%; }
+
+    .topline {
+      background: var(--plum);
+      color: var(--gold);
+      text-align: center;
+      padding: 9px 16px;
+      font: 12px/1.6 Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header {
+      background: var(--ivory);
+      border-bottom: 1px solid #e5d7c1;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--plum);
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      display: block;
+      color: #97743c;
+      font: 10px/2 Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font: 13px Arial, sans-serif;
+      color: var(--plum);
+    }
+
+    nav a:hover { color: #98713a; }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 85% 20%, #75506b 0, transparent 35%),
+        linear-gradient(135deg, #28152b, var(--plum) 65%, #54344d);
+      color: var(--ivory);
+      padding: 90px 8% 100px;
+      text-align: center;
+    }
+
+    .hero-inner { max-width: 850px; margin: auto; }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font: 12px Arial, sans-serif;
+      color: var(--gold);
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: 1.08;
+      font-weight: normal;
+      margin: 22px 0;
+    }
+
+    h1 em { color: var(--gold); }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      color: #f4e9ef;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      background: var(--gold);
+      color: #28152b;
+      text-decoration: none;
+      font: bold 13px Arial, sans-serif;
+      letter-spacing: .4px;
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: var(--ivory);
+    }
+
+    .btn:hover { opacity: .86; }
+
+    .faith-line {
+      color: var(--gold);
+      margin-top: 48px;
+      font-size: 15px;
+      font-style: italic;
+    }
+
+    section { padding: 76px 8%; }
+
+    .section-inner { max-width: 1080px; margin: auto; }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font: 11px Arial, sans-serif;
+      color: #98713a;
+    }
+
+    h2 {
+      color: var(--plum);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2;
+      font-weight: normal;
+      margin: 12px 0 20px;
+    }
+
+    .intro {
+      max-width: 760px;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .center { text-align: center; }
+    .center .intro { margin-left: auto; margin-right: auto; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .quote-panel {
+      background: var(--cream);
+      border-left: 4px solid var(--gold);
+      padding: 32px;
+      color: var(--plum);
+      font-size: 23px;
+      font-style: italic;
+    }
+
+    .quote-panel small {
+      display: block;
+      margin-top: 15px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .services { background: #f5eddf; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 28px 24px;
+      border: 1px solid #eadbc4;
+      border-top: 3px solid var(--gold);
+    }
+
+    .card .number {
+      color: #a17b43;
+      font: 12px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .card h3 {
+      color: var(--plum);
+      font-size: 23px;
+      font-weight: normal;
+      margin: 14px 0 10px;
+    }
+
+    .card p { color: var(--muted); font-size: 15px; }
+
+    .story-band {
+      background: var(--plum);
+      color: var(--ivory);
+    }
+
+    .story-band h2 { color: var(--ivory); }
+    .story-band .intro { color: #e9dce6; }
+    .story-band .section-label { color: var(--gold); }
+
+    .values {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .value {
+      padding: 8px 13px;
+      border: 1px solid #856b7e;
+      color: var(--gold);
+      font: 12px Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .community-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .community-box {
+      padding: 28px;
+      border: 1px solid #e4d5be;
+      background: white;
+    }
+
+    .community-box h3 { color: var(--plum); font-size: 24px; }
+    .community-box p { color: var(--muted); }
+
+    .social { background: var(--cream); }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .social-card {
+      text-align: center;
+      background: white;
+      padding: 28px 20px;
+      border: 1px solid #e3d4bd;
+    }
+
+    .social-card h3 {
+      font-size: 25px;
+      font-weight: normal;
+      color: var(--plum);
+    }
+
+    .qr {
+      width: 180px;
+      height: 180px;
+      display: block;
+      margin: 18px auto;
+      image-rendering: pixelated;
+    }
+
+    .social-card p { color: var(--muted); font-size: 14px; }
+
+    .social-card .btn {
+      background: var(--plum);
+      color: white;
+      border-color: var(--plum);
+    }
+
+    .contact { text-align: center; }
+
+    .contact-panel {
+      max-width: 800px;
+      margin: 30px auto 0;
+      padding: 35px;
+      background: var(--plum);
+      color: var(--ivory);
+    }
+
+    .contact-panel h3 {
+      font-size: 28px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .contact-panel p { color: #eadfe8; }
+
+    footer {
+      background: #241426;
+      color: #e8dce5;
+      text-align: center;
+      padding: 28px 18px;
+      font: 12px/1.8 Arial, sans-serif;
+    }
+
+    footer a { color: var(--gold); }
+
+    @media (max-width: 760px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; gap: 13px; }
+      .hero { padding: 65px 6%; }
+      section { padding: 55px 6%; }
+      .about-grid, .cards, .community-grid, .social-grid {
+        grid-template-columns: 1fr;
+      }
+      .quote-panel { font-size: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline">EST. 2024 &nbsp; • &nbsp; IN FAITH WE BLOSSOM</div>
+
+  <header>
+    <a class="brand" href="#home">
+      Blossoms Legacy
+      <span>HEAVEN CREATED 2 BLOSSOM L.L.C.</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">Our Mission</a>
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#community">Community</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">Faith • Family • Community • Growth</div>
+        <h1>Where Purpose Takes Root and <em>Legacies Blossom</em></h1>
+        <p>
+          Welcome to Blossoms Legacy, the community-centered brand of
+          Heaven Created 2 Blossom L.L.C. We believe that with faith,
+          support, and opportunities to grow, every person and family
+          can take meaningful steps toward a brighter future.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#services">Explore Our Services</a>
+          <a class="btn outline" href="#connect">Connect With Us</a>
+        </div>
+        <div class="faith-line">“It's my legacy from THEE MOST HIGH GOD.”</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-inner about-grid">
+        <div>
+          <div class="section-label">Our Mission</div>
+          <h2>Built on Faith. Growing With Purpose.</h2>
+          <p class="intro">
+            Heaven Created 2 Blossom L.L.C. is rooted in a vision of
+            encouragement, personal growth, and community connection.
+            Through Blossoms Legacy, our goal is to help create spaces
+            where individuals and families feel supported, valued, and
+            encouraged to keep growing.
+          </p>
+          <p>
+            We believe a legacy is more than what we leave behind.
+            It is also the care we show, the knowledge we share, and
+            the positive difference we make in the lives of others.
+          </p>
+          <a class="btn" href="#community">Grow With Us</a>
+        </div>
+
+        <div class="quote-panel">
+          “Every blossom has its own season. With faith, patience,
+          and care, growth is possible.”
+          <small>THE HEART OF BLOSSOMS LEGACY</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-inner">
+        <div class="section-label">How We Serve</div>
+        <h2>Growing Together, One Step at a Time</h2>
+        <p class="intro">
+          Our work is centered on helping people access encouragement,
+          resources, and opportunities that support growth and stronger
+          communities.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="number">01 / FAMILY</div>
+            <h3>Family Support</h3>
+            <p>
+              A focus on family well-being, supportive connections,
+              and helping families explore resources and opportunities
+              that meet their needs.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">02 / COMMUNITY</div>
+            <h3>Community Outreach</h3>
+            <p>
+              Connecting people with information, resources, outreach
+              opportunities, and community-centered programs that
+              encourage belonging and empowerment.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">03 / GROWTH</div>
+            <h3>Mentoring & Growth</h3>
+            <p>
+              Encouraging personal development, learning, confidence,
+              goal setting, and the pursuit of new possibilities
+              through supportive guidance.
+            </p>
+          </article>
+        </div>
+
+        <p class="intro">
+          Services and programs may vary. Contact us to ask about current
+          offerings, availability, and eligibility.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-band" id="story">
+      <div class="section-inner">
+        <div class="section-label">Our Story & Our Values</div>
+        <h2>A Legacy That Continues to Grow</h2>
+        <p class="intro">
+          Blossoms Legacy represents the belief that our purpose can
+          reach beyond ourselves. We want our work to reflect faith,
+          compassion, perseverance, and a commitment to making a
+          meaningful contribution to the community.
+        </p>
+        <p class="intro">
+          Every family encouraged, every connection made, and every
+          opportunity to grow can become part of a lasting legacy.
+          This is a journey of building, learning, and blossoming
+          together.
+        </p>
+        <div class="values">
+          <span class="value">FAITH</span>
+          <span class="value">COMPASSION</span>
+          <span class="value">EMPOWERMENT</span>
+          <span class="value">GROWTH</span>
+          <span class="value">COMMUNITY</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="community">
+      <div class="section-inner">
+        <div class="section-label">Stronger Together</div>
+        <h2>Community & Partnerships</h2>
+        <p class="intro">
+          Positive change grows when people come together. We welcome
+          conversations with community members, organizations, and
+          potential supporters who share an interest in helping people
+          and families thrive.
+        </p>
+
+        <div class="community-grid">
+          <div class="community-box">
+            <h3>Community Connections</h3>
+            <p>
+              Interested in collaboration, outreach, or connecting
+              people with resources? Reach out to begin a conversation
+              about shared goals and community needs.
+            </p>
+            <a href="#connect">Connect with us →</a>
+          </div>
+
+          <div class="community-box">
+            <h3>Sponsorship & Support</h3>
+            <p>
+              We welcome inquiries about potential sponsorships,
+              donations, partnerships, and other ways to support
+              community-centered efforts. Please contact us to discuss
+              opportunities and current needs.
+            </p>
+            <a href="#connect">Discuss an opportunity →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social" id="connect">
+      <div class="section-inner center">
+        <div class="section-label">Stay Connected</div>
+        <h2>Let's Keep Growing Together</h2>
+        <p class="intro">
+          Follow Blossoms Legacy on social media for updates, inspiration,
+          and ways to stay connected with our community.
+          Scan a QR code with your phone camera or use the links below.
+        </p>
+
+        <div class="social-grid">
+          <div class="social-card">
+            <h3>Facebook</h3>
+            <img
+              class="qr"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fwww.facebook.com%2Fblossomslegacy33"
+              alt="QR code linking to the Blossoms Legacy Facebook page"
+              width="180" height="180"
+              loading="lazy">
+            <p>Find our page and follow along.</p>
+            <a class="btn" href="https://www.facebook.com/blossomslegacy33"
+               target="_blank" rel="noopener noreferrer">Visit Facebook</a>
+          </div>
+
+          <div class="social-card">
+            <h3>TikTok</h3>
+            <img
+              class="qr"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fwww.tiktok.com%2F%40blossomslegacy"
+              alt="QR code linking to the Blossoms Legacy TikTok profile"
+              width="180" height="180"
+              loading="lazy">
+            <p>Connect with us on TikTok.</p>
+            <a class="btn" href="https://www.tiktok.com/@blossomslegacy"
+               target="_blank" rel="noopener noreferrer">Visit TikTok</a>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Have a Question or an Idea?</h3>
+          <p>
+            We would love to hear from you about services, community
+            connections, partnerships, or ways to work together.
+          </p>
+          <p>
+            Message us through our
+            <a href="https://www.facebook.com/blossomslegacy33"
+               target="_blank" rel="noopener noreferrer">Facebook page</a>
+            to start a conversation.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Heaven Created 2 Blossom L.L.C.</strong></p>
+    <p>Doing business as Blossoms Legacy</p>
+    <p>EST. 2024 • IN FAITH WE BLOSSOM</p>
+    <p>“It's my legacy from THEE MOST HIGH GOD.”</p>
+    <p>© <span id="year"></span> Heaven Created 2 Blossom L.L.C. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
