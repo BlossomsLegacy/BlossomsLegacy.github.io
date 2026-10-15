@@ -1,230 +1,821 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#241426">
-<meta name="description" content="Heaven Created 2 BLOSSOM L.L.C. — Blossoms Legacy. Family, services, community outreach, modeling, partnerships, and a future worth growing.">
-<title>Blossoms Legacy | Heaven Created 2 BLOSSOM L.L.C.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#40152f">
+  <meta name="description" content="Discover Blossoms Legacy, the mission and services of Heaven Created 2 BLOSSOM L.L.C. Supporting families, community growth, creativity, and purpose.">
+  <title>Blossoms Legacy | Heaven Created 2 BLOSSOM L.L.C.</title>
 
-<style>
-:root {
-  --plum: #241426;
-  --plum-light: #49304a;
-  --gold: #d8b878;
-  --gold-light: #f0dba8;
-  --cream: #fbf6ed;
-  --white: #fffdf8;
-  --ink: #302632;
-  --muted: #716672;
-  --line: #e7dcca;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body {
-  margin: 0;
-  color: var(--ink);
-  background: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.7;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; }
-.container { max-width: 1120px; margin: auto; }
-.announcement {
-  background: var(--plum);
-  color: var(--gold-light);
-  text-align: center;
-  padding: 9px 15px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255,253,248,.97);
-  border-bottom: 1px solid var(--line);
-}
-.nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 12px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--plum);
-  font-family: Georgia, serif;
-  font-weight: bold;
-  line-height: 1.2;
-}
-.brand img { width: 65px; height: 58px; object-fit: contain; }
-.brand small {
-  display: block;
-  margin-top: 5px;
-  font: 10px Arial, sans-serif;
-  letter-spacing: 1.5px;
-  color: #987644;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.nav-links a {
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-}
-.nav-links a:hover { color: #987644; }
-.nav-links .nav-button { background: var(--plum); color: white; padding: 10px 14px; }
-.hero {
-  color: var(--cream);
-  background:
-    radial-gradient(ellipse at 85% 15%, rgba(216,184,120,.2), transparent 30%),
-    linear-gradient(125deg, #201222, #49304a);
-  padding: 80px 24px;
-}
-.hero-grid {
-  max-width: 1120px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 50px;
-  align-items: center;
-}
-.kicker {
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #987644;
-}
-.hero .kicker { color: var(--gold-light); }
-h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
-h1 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.06;
-  font-weight: normal;
-  margin: 18px 0;
-}
-h1 em { color: var(--gold-light); font-style: normal; }
-.hero p { color: #eee2ed; max-width: 650px; }
-.hero-image {
-  background: var(--white);
-  padding: 22px;
-  border: 1px solid var(--gold);
-  box-shadow: 0 20px 60px #0005;
-}
-.hero-image img { width: 100%; max-height: 360px; object-fit: contain; }
-.hero-image p {
-  color: var(--plum);
-  text-align: center;
-  font-family: Georgia, serif;
-  margin: 15px 0 0;
-}
-.buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
-.button {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--plum);
-  padding: 13px 18px;
-  border: 1px solid var(--gold);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-}
-.button:hover { background: var(--gold-light); }
-.button.outline { background: transparent; color: white; border-color: #ffffff88; }
-.button.dark { background: var(--plum); color: white; border-color: var(--plum); }
-.proof {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background: #fffaf1;
-  border-bottom: 1px solid var(--line);
-}
-.proof div { text-align: center; padding: 22px 10px; border-right: 1px solid var(--line); }
-.proof strong { display: block; font: 20px Georgia, serif; color: var(--plum); }
-.proof span { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
-section { padding: 78px 24px; }
-.section-title {
-  color: var(--plum);
-  font-size: clamp(32px, 4vw, 49px);
-  font-weight: normal;
-  line-height: 1.15;
-  margin: 12px 0 18px;
-}
-.lead { font-size: 17px; color: var(--muted); max-width: 780px; }
-.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
-.quote {
-  background: var(--cream);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--gold);
-  padding: 30px;
-}
-.quote blockquote {
-  margin: 0 0 15px;
-  color: var(--plum);
-  font: 25px/1.4 Georgia, serif;
-}
-.cream-section { background: var(--cream); }
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 32px; }
-.card { background: white; border: 1px solid var(--line); padding: 25px; }
-.card .number { color: #987644; font-size: 11px; letter-spacing: 2px; font-weight: bold; }
-.card h3 { font-size: 24px; line-height: 1.2; font-weight: normal; color: var(--plum); margin: 12px 0; }
-.card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
-.plum-section { background: var(--plum); color: var(--cream); }
-.plum-section .section-title { color: var(--cream); }
-.plum-section .kicker { color: var(--gold-light); }
-.plum-section p { color: #e5d9e4; }
-.pills { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 22px; }
-.pills span { border: 1px solid #d8b87888; color: var(--gold-light); padding: 7px 11px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
-.modeling { background: #fffdf8; }
-.model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 35px 0 22px; }
-.model-card { margin: 0; border: 1px solid var(--line); background: white; padding: 14px; }
-.model-card img {
-  width: 100%;
-  height: 430px;
-  object-fit: contain;
-  background: #f5efe6;
-}
-.model-card figcaption { padding: 17px 7px 8px; }
-.model-card figcaption strong { display: block; color: var(--plum); font: 21px Georgia, serif; }
-.model-card figcaption span { display: block; color: var(--muted); font-size: 13px; margin-top: 5px; }
-.note { font-size: 12px; color: var(--muted); }
-.opportunity { background: var(--plum); color: white; }
-.opportunity .card { color: var(--ink); }
-.opportunity .card.featured { background: #39213a; border-color: var(--gold); }
-.opportunity .featured h3 { color: white; }
-.opportunity .featured p { color: #eee2ed; }
-.opportunity .featured .number { color: var(--gold-light); }
-.community { background: #f4eadb; }
-.list { padding-left: 20px; }
-.list li { padding: 7px 0; }
-.social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
-.social-card { border: 1px solid var(--line); padding: 25px; background: white; }
-.social-card h3 { color: var(--plum); font-size: 25px; font-weight: normal; margin-bottom: 5px; }
-.social-card p { color: var(--muted); font-size: 14px; }
-.social-card a { color: #77572e; font-weight: bold; font-size: 13px; }
-.contact { background: var(--cream); }
-.contact-box { background: white; padding: 30px; border: 1px solid var(--line); }
-.contact-box h3 { color: var(--plum); font-size: 28px; font-weight: normal; }
-.contact-item { display: block; padding: 16px 0; border-bottom: 1px solid var(--line); text-decoration: none; overflow-wrap: anywhere; }
-.contact-item span { display: block; font-size: 12px; color: var(--muted); }
-.contact-item strong { color: var(--plum); }
-footer { background: #1c101e; color: #e8dce7; text-align: center; padding: 40px 20px; font-size: 12px; }
-footer strong { font: 23px Georgia, serif; color: var(--gold-light); }
-.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 17px; margin: 20px 0; }
-.footer-links a { color: var(--gold-light); text-decoration: none; }
-@media(max-width: 850px) {
-  .nav { align-items: flex-start; flex-direction: column; }
-  .nav-links { gap: 12px; }
+  <style>
+    :root {
+      --plum: #40152f;
+      --deep: #28101f;
+      --gold: #d7b36a;
+      --cream: #fff9ef;
+      --white: #ffffff;
+      --text: #342630;
+      --muted: #6e6069;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--deep);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+
+    header {
+      background: var(--plum);
+      color: var(--white);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: white;
+      padding: 4px;
+    }
+
+    .brand-name {
+      font-family: Georgia, serif;
+      font-size: 1.45rem;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .brand small {
+      display: block;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background:
+        linear-gradient(115deg, rgba(40,16,31,.97), rgba(64,21,47,.88));
+      color: white;
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.6rem);
+      margin: 18px 0;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 1.12rem;
+      color: #f6edf2;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      margin: 6px;
+      border: 2px solid var(--gold);
+      border-radius: 30px;
+      background: var(--gold);
+      color: var(--deep);
+      font-weight: bold;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: white;
+    }
+
+    section {
+      padding: 76px 24px;
+      scroll-margin-top: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--plum);
+      margin: 10px 0 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .gold-line {
+      width: 68px;
+      height: 3px;
+      background: var(--gold);
+      margin: 18px auto;
+    }
+
+    .intro {
+      background: var(--white);
+    }
+
+    .intro-copy {
+      max-width: 850px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    .intro-copy p {
+      margin-bottom: 16px;
+    }
+
+    .mission {
+      background: #f2e7ec;
+    }
+
+    .mission-box {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+      border-left: 5px solid var(--gold);
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 10px 35px rgba(40,16,31,.07);
+    }
+
+    .mission-box h2 {
+      color: var(--plum);
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 8px 26px rgba(40,16,31,.06);
+    }
+
+    .card .number {
+      color: var(--gold);
+      font-size: 1.7rem;
+      font-family: Georgia, serif;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      color: var(--plum);
+      font-size: 1.35rem;
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .97rem;
+    }
+
+    .family {
+      background: var(--plum);
+      color: white;
+    }
+
+    .family .section-heading h2 {
+      color: white;
+    }
+
+    .family .section-heading p {
+      color: #f0e2e9;
+    }
+
+    .family .card {
+      background: #51243f;
+      border: 1px solid rgba(215,179,106,.5);
+      border-top: 4px solid var(--gold);
+      color: white;
+    }
+
+    .family .card h3 {
+      color: var(--gold);
+    }
+
+    .family .card p {
+      color: #f3eaf0;
+    }
+
+    .models {
+      background: white;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+      align-items: start;
+    }
+
+    .model-card {
+      overflow: hidden;
+      background: var(--cream);
+      border-radius: 12px;
+      border: 1px solid #eadce3;
+    }
+
+    .model-card img {
+      width: 100%;
+      height: 440px;
+      display: block;
+      object-fit: cover;
+      background: #eee2e9;
+    }
+
+    .model-card .model-copy {
+      padding: 24px;
+    }
+
+    .model-card h3 {
+      color: var(--plum);
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-size: .88rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .partners {
+      background: #f2e7ec;
+    }
+
+    .contact {
+      background: var(--deep);
+      color: white;
+    }
+
+    .contact .section-heading h2 {
+      color: white;
+    }
+
+    .contact .section-heading p {
+      color: #f1e4ec;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .contact-panel {
+      padding: 30px;
+      background: #40152f;
+      border: 1px solid rgba(215,179,106,.45);
+      border-radius: 12px;
+    }
+
+    .contact-panel h3 {
+      color: var(--gold);
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    .contact-panel p {
+      margin-bottom: 12px;
+    }
+
+    .contact-panel a:not(.button) {
+      color: var(--gold);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      background: #170b13;
+      color: #e8dce4;
+      font-size: .88rem;
+    }
+
+    footer a {
+      color: var(--gold);
+    }
+
+    @media (max-width: 850px) {
+      .nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .model-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 70px 20px;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-box {
+        padding: 25px;
+      }
+
+      .model-card img {
+        height: 360px;
+      }
+
+      .brand-name {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    Purpose • Family • Community • Growth
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home" aria-label="Blossoms Legacy home">
+        <img
+          src="logo.png"
+          alt="Blossoms Legacy logo"
+          onerror="this.style.display='none'">
+        <span>
+          <span class="brand-name">Blossoms Legacy</span>
+          <small>HEAVEN CREATED 2 BLOSSOM L.L.C.</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">Our Story</a>
+        <a href="#mission">Our Mission</a>
+        <a href="#services">Services</a>
+        <a href="#family">Family & Modeling</a>
+        <a href="#partners">Partnerships</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">A legacy with purpose</div>
+        <h1>From Life's Challenges to a Legacy of Growth</h1>
+        <p>
+          Welcome to Blossoms Legacy, the vision of Heaven Created 2
+          BLOSSOM L.L.C. We believe that difficult experiences can become
+          the beginning of something meaningful, and that families and
+          communities deserve opportunities to grow, heal, and thrive.
+        </p>
+        <a class="button" href="#mission">Discover Our Mission</a>
+        <a class="button button-outline" href="#contact">Connect With Us</a>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Who we are</div>
+          <h2>A Story That Continues to Blossom</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="intro-copy">
+          <p>
+            Heaven Created 2 BLOSSOM L.L.C. was created around the belief
+            that our experiences do not have to define our limits. Even
+            through hurt, disappointment, setbacks, and difficult seasons,
+            there is room to learn, rebuild, and move forward with purpose.
+          </p>
+          <p>
+            Blossoms Legacy represents growth, resilience, family, and the
+            desire to leave something positive for the next generation.
+            Our vision is to use what we learn along the way to encourage
+            others, strengthen families, and build meaningful connections
+            within our community.
+          </p>
+          <p>
+            We are growing our vision one step at a time, with a commitment
+            to compassion, creativity, positive guidance, and opportunities
+            that help people see what is possible for their future.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission" id="mission">
+      <div class="mission-box">
+        <div class="eyebrow">Our purpose</div>
+        <h2>Turning Pain Into Purpose</h2>
+        <p>
+          Our mission is to transform life's challenges into meaningful
+          action. We want children and families to have access to
+          encouragement, positive influences, support, and opportunities
+          that help them build a stronger future.
+        </p>
+        <br>
+        <p>
+          We believe every child deserves to be seen, encouraged, and given
+          room to discover their strengths. We also believe that families
+          can learn from the past without being limited by it. Through
+          community outreach, family advocacy, creative opportunities,
+          and service, we aim to help people move toward growth and purpose.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">What we do</div>
+          <h2>Our Services & Areas of Focus</h2>
+          <p>
+            Building opportunities for families, community members,
+            entrepreneurs, and creative talent.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="number">01</div>
+            <h3>Childcare & Family Support</h3>
+            <p>
+              A family-centered approach to caring for children and
+              supporting parents. Childcare services are subject to
+              applicable licensing, supervision, and safety requirements.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">02</div>
+            <h3>Community Outreach</h3>
+            <p>
+              Building connections, encouraging families, identifying
+              community needs, and helping people connect with positive
+              support and resources.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">03</div>
+            <h3>Events & Party Planning</h3>
+            <p>
+              Helping bring celebrations and special occasions to life
+              through creative ideas, thoughtful planning, and attention
+              to the details that make an event memorable.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">04</div>
+            <h3>Business Growth Support</h3>
+            <p>
+              Encouraging new ideas, organization, collaboration, and
+              practical steps that help individuals develop their goals
+              and move their business vision forward.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">05</div>
+            <h3>Mentoring & Positive Guidance</h3>
+            <p>
+              Promoting encouragement, personal development, positive
+              decision-making, and healthy opportunities for young people
+              and families.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="number">06</div>
+            <h3>Creative & Modeling Opportunities</h3>
+            <p>
+              Developing opportunities for modeling, brand collaborations,
+              creative projects, and partnerships that align with our
+              family's values and long-term vision.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="family" id="family">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Our family journey</div>
+          <h2>Growing Together, Building a Legacy</h2>
+          <p>
+            Our family's journey is about learning, evolving, celebrating
+            progress, and creating a brighter future for the next generation.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Family & Growth</h3>
+            <p>
+              We value the lessons that come from everyday life, the
+              importance of staying connected, and the determination to
+              keep growing through every season.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Our Son's Modeling Journey</h3>
+            <p>
+              We are exploring modeling opportunities, professional
+              collaborations, and creative projects that support our
+              son's development and celebrate his individuality.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Our Story, Our Values</h3>
+            <p>
+              Through family storytelling and community engagement,
+              we hope to share lessons about resilience, purpose,
+              personal growth, and the power of a fresh start.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="models" id="modeling">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Modeling & collaborations</div>
+          <h2>Creative Opportunities for Our Young Talent</h2>
+          <p>
+            We welcome appropriate inquiries about modeling, photography,
+            brand partnerships, and family-friendly creative opportunities.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="model-grid">
+          <article class="model-card">
+            <img
+              src="https://raw.githubusercontent.com/BlossomsLegacy/Heaven-Created-2-BLOSSOM-LLC-BlossomsLegacy/main/Model%20%231.heic"
+              alt="Modeling portrait one"
+              loading="lazy"
+              onerror="this.alt='Model photo one needs to be uploaded as a JPG or PNG image.'; this.style.display='none';">
+            <div class="model-copy">
+              <h3>Modeling Portfolio</h3>
+              <p>
+                A growing portfolio celebrating confidence, creativity,
+                and future opportunities.
+              </p>
+            </div>
+          </article>
+
+          <article class="model-card">
+            <img
+              src="https://raw.githubusercontent.com/BlossomsLegacy/Heaven-Created-2-BLOSSOM-LLC-BlossomsLegacy/main/Model%20%232.png"
+              alt="Modeling portrait two"
+              loading="lazy"
+              onerror="this.alt='Model photo two could not be loaded. Check the image filename in GitHub.'; this.style.display='none';">
+            <div class="model-copy">
+              <h3>Brand Collaborations</h3>
+              <p>
+                Interested in a suitable modeling, photography, or
+                brand opportunity? Contact us with your project details.
+              </p>
+              <a class="button" href="#contact">Business Inquiries</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          For a minor's privacy and safety, professional inquiries should
+          go through the parent or legal guardian. Please do not publish
+          private identifying details about a child.
+        </p>
+      </div>
+    </section>
+
+    <section class="partners" id="partners">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Let's grow together</div>
+          <h2>For Sponsors, Investors & Community Partners</h2>
+          <p>
+            We are interested in building genuine relationships with
+            people and organizations that share our commitment to growth,
+            family support, creativity, and community impact.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Sponsorships</h3>
+            <p>
+              Explore opportunities to support appropriate family,
+              community, creative, and outreach initiatives.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Business Partnerships</h3>
+            <p>
+              Connect with us about collaborations, service opportunities,
+              events, and projects that align with our goals.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Community Impact</h3>
+            <p>
+              Help us explore meaningful ways to encourage families,
+              support positive development, and create lasting value.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Get in touch</div>
+          <h2>Let's Start a Conversation</h2>
+          <p>
+            For services, community outreach, sponsorships, business
+            partnerships, and modeling inquiries, contact us directly.
+          </p>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <h3>Business Contact</h3>
+            <p><strong>Business:</strong><br>
+              Heaven Created 2 BLOSSOM L.L.C.</p>
+            <p><strong>Brand:</strong><br>Blossoms Legacy</p>
+            <p><strong>Phone:</strong><br>
+              <a href="tel:+14422253747">(442) 225-3747</a></p>
+            <p><strong>Email:</strong><br>
+              <span>Replace the email placeholder in this file with your real business email before publishing.</span>
+            </p>
+            <p><strong>Focus:</strong><br>
+              Family support, community outreach, events, creative
+              opportunities, and business partnerships.</p>
+          </div>
+
+          <div class="contact-panel">
+            <h3>Have a Project in Mind?</h3>
+            <p>
+              When you contact us, please include your name, organization
+              (if applicable), the purpose of your inquiry, and the best
+              way to reach you.
+            </p>
+            <p>
+              We welcome respectful inquiries from potential clients,
+              sponsors, collaborators, and community partners.
+            </p>
+            <a class="button" href="tel:+14422253747">Call Our Business</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="year"></span>
+      Heaven Created 2 BLOSSOM L.L.C. | Blossoms Legacy
+    </p>
+    <p>Growing with purpose. Building a meaningful legacy.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
+```
