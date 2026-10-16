@@ -1,481 +1,1173 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#40152f">
-
-  <meta name="description" content="Heaven Created 2 BLOSSOM L.L.C. — Blossoms Legacy. Family, community outreach, creative opportunities, personal growth, and purpose.">
-
-  <title>Blossoms Legacy | Heaven Created 2 BLOSSOM L.L.C.</title>
-
-  <style>
-    :root {
-      --plum: #40152f;
-      --deep-plum: #24101e;
-      --gold: #d7b36a;
-      --cream: #fff9ef;
-      --white: #ffffff;
-      --text: #352631;
-      --muted: #70616a;
-      --light-pink: #f3e8ee;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 20px;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.7;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .announcement {
-      padding: 9px 16px;
-      background: var(--deep-plum);
-      color: var(--white);
-      text-align: center;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    header {
-      background: var(--plum);
-      color: var(--white);
-      border-bottom: 3px solid var(--gold);
-    }
-
-    .navigation {
-      max-width: 1180px;
-      margin: auto;
-      padding: 18px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      text-decoration: none;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 68px;
-      height: 68px;
-      object-fit: contain;
-      background: white;
-      border-radius: 50%;
-      padding: 4px;
-    }
-
-    .brand-title {
-      display: block;
-      color: var(--gold);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
-      font-weight: bold;
-      line-height: 1.25;
-    }
-
-    .brand-subtitle {
-      display: block;
-      margin-top: 4px;
-      font-size: 10px;
-      letter-spacing: 1px;
-      color: white;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-      color: var(--gold);
-    }
-
-    .hero {
-      color: white;
-      text-align: center;
-      padding: 100px 22px;
-      background:
-        radial-gradient(ellipse at top, #653451 0%, transparent 60%),
-        linear-gradient(135deg, #24101e, #40152f 65%, #301126);
-    }
-
-    .hero-content {
-      max-width: 880px;
-      margin: auto;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.25;
-    }
-
-    h1 {
-      margin: 18px 0;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-    }
-
-    .hero p {
-      max-width: 730px;
-      margin: 0 auto 26px;
-      color: #f7edf3;
-      font-size: 1.08rem;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 22px;
-      margin: 6px 4px;
-      border: 2px solid var(--gold);
-      border-radius: 30px;
-      background: var(--gold);
-      color: var(--deep-plum);
-      font-weight: bold;
-      text-decoration: none;
-      transition: background .2s ease, color .2s ease;
-    }
-
-    .button:hover,
-    .button:focus {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .button-outline {
-      background: transparent;
-      color: white;
-    }
-
-    section {
-      padding: 75px 24px;
-    }
-
-    .container {
-      max-width: 1120px;
-      margin: auto;
-    }
-
-    .section-heading {
-      max-width: 780px;
-      margin: 0 auto 38px;
-      text-align: center;
-    }
-
-    .section-heading h2 {
-      margin: 10px 0 14px;
-      color: var(--plum);
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-
-    .section-heading p {
-      color: var(--muted);
-    }
-
-    .gold-line {
-      width: 65px;
-      height: 3px;
-      margin: 18px auto;
-      background: var(--gold);
-    }
-
-    .about {
-      background: white;
-    }
-
-    .about-copy {
-      max-width: 850px;
-      margin: auto;
-      font-size: 1.04rem;
-    }
-
-    .about-copy p {
-      margin-bottom: 17px;
-    }
-
-    .mission {
-      background: var(--light-pink);
-    }
-
-    .mission-box {
-      max-width: 920px;
-      margin: auto;
-      padding: 38px;
-      background: white;
-      border-left: 5px solid var(--gold);
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(36, 16, 30, .07);
-    }
-
-    .mission-box h2 {
-      color: var(--plum);
-      font-size: 2rem;
-      margin: 10px 0 16px;
-    }
-
-    .mission-box p {
-      margin-bottom: 14px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      padding: 28px;
-      border-radius: 12px;
-      background: white;
-      border-top: 4px solid var(--gold);
-      box-shadow: 0 8px 25px rgba(36, 16, 30, .06);
-    }
-
-    .card-number {
-      color: #b58c3e;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.55rem;
-    }
-
-    .card h3 {
-      margin: 10px 0;
-      color: var(--plum);
-      font-size: 1.35rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: .96rem;
-    }
-
-    .family-section {
-      background: var(--plum);
-      color: white;
-    }
-
-    .family-section .section-heading h2 {
-      color: white;
-    }
-
-    .family-section .section-heading p {
-      color: #f0e3eb;
-    }
-
-    .family-section .card {
-      background: #512440;
-      border: 1px solid rgba(215, 179, 106, .5);
-      border-top: 4px solid var(--gold);
-    }
-
-    .family-section .card h3 {
-      color: var(--gold);
-    }
-
-    .family-section .card p {
-      color: #f5eaf0;
-    }
-
-    .modeling {
-      background: white;
-    }
-
-    .model-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-      align-items: start;
-    }
-
-    .model-card {
-      overflow: hidden;
-      background: var(--cream);
-      border: 1px solid #eadce4;
-      border-radius: 12px;
-    }
-
-    .model-photo {
-      display: block;
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      background: var(--light-pink);
-    }
-
-    .model-copy {
-      padding: 24px;
-    }
-
-    .model-copy h3 {
-      color: var(--plum);
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .small-note {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    .partnerships {
-      background: var(--light-pink);
-    }
-
-    .contact {
-      background: var(--deep-plum);
-      color: white;
-    }
-
-    .contact .section-heading h2 {
-      color: white;
-    }
-
-    .contact .section-heading p {
-      color: #f1e4ec;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-    }
-
-    .contact-panel {
-      padding: 30px;
-      background: #40152f;
-      border: 1px solid rgba(215, 179, 106, .5);
-      border-radius: 12px;
-    }
-
-    .contact-panel h3 {
-      margin-bottom: 18px;
-      color: var(--gold);
-      font-size: 1.5rem;
-    }
-
-    .contact-panel p {
-      margin-bottom: 15px;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-panel a:not(.button) {
-      color: var(--gold);
-    }
-
-    .contact-panel a:not(.button):hover {
-      color: white;
-    }
-
-    footer {
-      padding: 25px 18px;
-      text-align: center;
-      background: #170a13;
-      color: #e9dfe6;
-      font-size: .88rem;
-    }
-
-    footer p + p {
-      margin-top: 5px;
-    }
-
-    .footer-gold {
-      color: var(--gold);
-    }
-
-    @media (max-width: 900px) {
-      .navigation {
-        flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 600px) {
-      .navigation {
-        padding: 17px;
-      }
-
-      .brand-title {
-        font-size: 1.18rem;
-      }
-
-      .nav-links {
-        gap: 10px 14px;
-      }
-
-      .nav-links a {
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 72px 19px;
-      }
-
-      section {
-        padding: 55px 18px;
-      }
-
-      .card-grid,
-      .model-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-       .mission-box {
-        padding: 25px;
-      }
-      .model-photo {
-        height: 370px;
-      }
-
-      .contact-panel {
-        padding: 23
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#35152f">
+<meta name="description" content="Blossoms Legacy by Heaven Created 2 BLOSSOM L.L.C.">
+<title>Blossoms Legacy | Heaven Created 2 BLOSSOM L.L.C.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --plum: #35152f;
+  --dark: #210d20;
+  --gold: #d9b56d;
+  --pale: #f2dfae;
+  --ivory: #fffaf1;
+  --cream: #f6efe3;
+  --ink: #2d2430;
+  --muted: #6e626d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--ivory);
+  font: 16px/1.65 "DM Sans", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrap {
+  width: min(1160px, calc(100% - 36px));
+  margin: auto;
+}
+
+.announcement {
+  background: var(--dark);
+  color: var(--pale);
+  text-align: center;
+  padding: 9px;
+  font-size: .8rem;
+  letter-spacing: .12em;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,250,241,.97);
+  border-bottom: 1px solid #eadfea;
+}
+
+.nav {
+  min-height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px #35152f22);
+}
+
+.brandname {
+  font: 700 clamp(1.2rem, 2.4vw, 1.8rem)/1.1 "Playfair Display", Georgia, serif;
+  color: var(--plum);
+}
+
+.legal {
+  display: block;
+  font-size: .65rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+nav a {
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--plum);
+}
+
+nav a:hover {
+  color: #9b702d;
+}
+
+.menu {
+  display: none;
+  background: var(--plum);
+  color: white;
+  border: 0;
+  padding: 10px 13px;
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  min-height: 48px;
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px #0002;
+}
+
+.gold {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.plum {
+  background: var(--plum);
+  color: white;
+}
+
+.outline {
+  border-color: #ffffff99;
+  color: white;
+}
+
+.hero {
+  color: white;
+  background:
+    radial-gradient(circle at 80% 20%, #d9b56d38, transparent 30%),
+    linear-gradient(125deg, var(--dark), var(--plum) 65%, #51264a);
+  padding: 76px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.eyebrow {
+  color: var(--pale);
+  font-size: .78rem;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.16;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 5.8vw, 5rem);
+  margin: 16px 0 20px;
+}
+
+h1 em {
+  color: var(--pale);
+  font-style: normal;
+}
+
+.hero p {
+  color: #ffffffd9;
+  font-size: 1.05rem;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.hero-art {
+  min-height: 390px;
+  border: 1px solid #f2dfae66;
+  border-radius: 48% 48% 24px 24px;
+  padding: 25px;
+  display: flex;
+  align-items: flex-end;
+  background:
+    radial-gradient(ellipse at 50% 25%, #f2dfae45, transparent 45%),
+    linear-gradient(145deg, #764b69, #2b1029);
+  box-shadow: 0 28px 65px #0004;
+}
+
+.art-inner {
+  padding: 25px;
+  border: 1px solid #f2dfae66;
+  border-radius: 18px;
+  background: #210d20b8;
+}
+
+.art-inner h2 {
+  color: var(--pale);
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.art-inner p {
+  margin: 0;
+  font-size: .95rem;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.soft {
+  background: var(--cream);
+}
+
+.darksection {
+  background: var(--plum);
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.heading .eyebrow {
+  color: #9b702d;
+}
+
+.darksection .heading .eyebrow {
+  color: var(--pale);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--plum);
+  margin: 12px 0 16px;
+}
+
+.darksection h2 {
+  color: white;
+}
+
+.heading p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.darksection .heading p {
+  color: #ffffffc7;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.quote {
+  min-height: 350px;
+  border-radius: 22px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  background:
+    radial-gradient(circle at 20% 20%, #f2dfae88, transparent 20%),
+    linear-gradient(145deg, #d5b87e, #7c4e70 55%, var(--plum));
+  box-shadow: 0 18px 45px #250e231f;
+}
+
+.quote .mark {
+  font: 5rem Georgia, serif;
+  color: var(--pale);
+  height: 65px;
+}
+
+.quote blockquote {
+  font: 1.65rem/1.3 "Playfair Display", Georgia, serif;
+  margin: 0;
+}
+
+.quote small {
+  color: var(--pale);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-top: 16px;
+}
+
+.storycopy p {
+  color: var(--muted);
+}
+
+.storycopy strong {
+  color: var(--plum);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #35152f15;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 10px 28px #250e230a;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #f4e6c8;
+  color: var(--plum);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: var(--plum);
+  margin: 0 0 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: .95rem;
+  margin: 0;
+}
+
+.models {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.photo {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background: #e8d9c4;
+}
+
+.photocard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--ink);
+  box-shadow: 0 18px 45px #0002;
+}
+
+.caption {
+  padding: 21px 24px;
+}
+
+.caption h3 {
+  color: var(--plum);
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+}
+
+.caption p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.placeholder {
+  height: 400px;
+  display: none;
+  place-items: center;
+  text-align: center;
+  padding: 25px;
+  color: var(--plum);
+  background: linear-gradient(145deg, #f0dfbd, #e5cfe0);
+}
+
+.placeholder strong {
+  display: block;
+  font: 1.5rem "Playfair Display", Georgia, serif;
+}
+
+.modelcopy {
+  margin-top: 30px;
+  padding: 28px;
+  border: 1px solid #f2dfae44;
+  border-radius: 20px;
+  background: #ffffff0b;
+}
+
+.modelcopy h3 {
+  color: var(--pale);
+  font-size: 1.65rem;
+  margin: 0 0 12px;
+}
+
+.modelcopy p {
+  color: #ffffffd1;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 20px 0;
+}
+
+.pill {
+  border: 1px solid #f2dfae66;
+  border-radius: 99px;
+  padding: 7px 12px;
+  color: var(--pale);
+  font-size: .85rem;
+}
+
+.partner {
+  padding: 36px;
+  border-radius: 26px;
+  background: linear-gradient(125deg, #f0dfbd, var(--ivory) 60%, #ead9e8);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 25px;
+}
+
+.partner h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-top: 0;
+}
+
+.partner p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 30px;
+}
+
+.panel {
+  padding: 28px;
+  border: 1px solid #f2dfae44;
+  border-radius: 20px;
+  background: #ffffff0a;
+}
+
+.panel h3 {
+  font-size: 1.6rem;
+  color: var(--pale);
+  margin: 0 0 15px;
+}
+
+.line {
+  padding: 12px 0;
+  border-bottom: 1px solid #ffffff22;
+}
+
+.line:last-child {
+  border: 0;
+}
+
+.line span {
+  display: block;
+  color: #ffffff9e;
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.line a {
+  color: white;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  color: #ffffffc7;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.socials a {
+  color: var(--pale);
+  border: 1px solid #f2dfae66;
+  border-radius: 99px;
+  padding: 9px 13px;
+  text-decoration: none;
+}
+
+.contactactions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.fine {
+  font-size: .8rem;
+  color: #ffffffb8;
+}
+
+footer {
+  background: var(--dark);
+  color: #ffffffb8;
+  padding: 25px 0;
+  font-size: .85rem;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.foot strong {
+  color: var(--pale);
+}
+
+@media (max-width: 980px) {
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 18px 22px 22px;
+    background: var(--ivory);
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid #35152f22;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero-grid,
+  .story,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    min-height: 300px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partner {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    width: calc(100% - 28px);
+  }
+
+  .nav {
+    min-height: 85px;
+  }
+
+  .logo {
+    width: 78px;
+    height: 78px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brandname {
+    font-size: 1.05rem;
+  }
+
+  .legal {
+    font-size: .52rem;
+    letter-spacing: 0;
+  }
+
+  .hero {
+    padding: 52px 0;
+  }
+
+  .hero-art {
+    min-height: 270px;
+    padding: 15px;
+  }
+
+  .art-inner {
+    padding: 20px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .cards,
+  .models {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .photo,
+  .placeholder {
+    height: 320px;
+  }
+
+  .partner {
+    padding: 24px;
+  }
+
+  .panel {
+    padding: 22px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .actions,
+  .contactactions {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  FAMILY • PURPOSE • COMMUNITY • OPPORTUNITY
+</div>
+
+<header>
+  <div class="wrap nav">
+
+    <a class="brand" href="#home" aria-label="Blossoms Legacy home">
+      <!-- IMPORTANT: Put your ORIGINAL logo image beside index.html and name it logo.png. -->
+      <img class="logo"
+           src="logo.png"
+           alt="Blossoms Legacy original logo"
+           onerror="this.style.display='none'">
+
+      <span>
+        <span class="brandname">Blossoms Legacy</span>
+        <span class="legal">A brand by Heaven Created 2 BLOSSOM L.L.C.</span>
+      </span>
+    </a>
+
+    <button class="menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            onclick="toggleMenu()">
+      Menu ☰
+    </button>
+
+    <nav id="site-menu" aria-label="Main navigation">
+      <a href="#story" onclick="closeMenu()">Our Story</a>
+      <a href="#services" onclick="closeMenu()">What We Do</a>
+      <a href="#modeling" onclick="closeMenu()">Modeling</a>
+      <a href="#partners" onclick="closeMenu()">Partner With Us</a>
+      <a class="btn plum" href="#contact" onclick="closeMenu()">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+
+      <div>
+        <div class="eyebrow">A vision growing into a legacy</div>
+
+        <h1>
+          Where purpose takes root and
+          <em>possibility blooms.</em>
+        </h1>
+
+        <p>
+          Welcome to Blossoms Legacy, the brand built through
+          Heaven Created 2 BLOSSOM L.L.C. We are growing with
+          purpose — bringing family, creativity, community outreach,
+          and business opportunity together to build something
+          meaningful for the next generation.
+        </p>
+
+        <div class="actions">
+          <a class="btn gold" href="#story">Discover Our Story</a>
+          <a class="btn outline" href="#contact">Connect With Us</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-inner">
+          <h2>Our roots. Our growth. Our legacy.</h2>
+          <p>
+            Where you begin does not have to define where you can go.
+            With purpose, support, and consistent work, a vision can
+            grow into something that serves others.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section" id="story">
+    <div class="wrap story">
+
+      <div class="quote">
+        <div class="mark">“</div>
+        <blockquote>
+          We started with a vision, kept going through the hard parts,
+          and are building something that can grow beyond us.
+        </blockquote>
+        <small>The heart of Blossoms Legacy</small>
+      </div>
+
+      <div class="storycopy">
+        <div class="eyebrow" style="color:#9b702d">
+          Our story & purpose
+        </div>
+
+        <h2>More than a name. A vision in motion.</h2>
+
+        <p>
+          Heaven Created 2 BLOSSOM L.L.C. is the business behind
+          Blossoms Legacy. Our journey is about turning life experience
+          into purpose, creating opportunities, and building something
+          positive that can continue to grow.
+        </p>
+
+        <p>
+          We are bringing our interests in family support, community
+          outreach, creative projects, and business development together
+          under one vision. We know growth takes patience, learning,
+          and people who believe in what is possible.
+        </p>
+
+        <p>
+          <strong>Our goal is to build with intention:</strong>
+          create meaningful connections, encourage confidence, support
+          families and communities, and make room for new opportunities
+          as the brand grows.
+        </p>
+
+        <a class="btn plum" href="#services">Explore Our Work</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section soft" id="services">
+    <div class="wrap">
+
+      <div class="heading">
+        <div class="eyebrow">What we're building</div>
+        <h2>Purpose expressed through action</h2>
+        <p>
+          Our work continues to develop as our business grows.
+          These are key areas that shape the Blossoms Legacy vision.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="icon">♡</div>
+          <h3>Family & Child-Focused Support</h3>
+          <p>
+            We value positive guidance, family connection, and
+            environments where children can feel encouraged and
+            supported. Any childcare or child-focused services are
+            provided only as permitted by applicable licensing,
+            training, and safety requirements.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✿</div>
+          <h3>Community Outreach</h3>
+          <p>
+            We want to build connections, encourage community
+            participation, and explore projects that help people
+            feel seen, supported, and connected to new possibilities.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">↗</div>
+          <h3>Business Growth & Consulting</h3>
+          <p>
+            We are interested in helping businesses think creatively,
+            strengthen their vision, explore new opportunities, and
+            grow beyond where they started through practical
+            collaboration and guidance.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✦</div>
+          <h3>Events & Creative Projects</h3>
+          <p>
+            From celebrations to brand-centered experiences, we explore
+            creative ways to bring people together and make special
+            moments thoughtful and memorable.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">◎</div>
+          <h3>Mentoring & Positive Guidance</h3>
+          <p>
+            We believe encouragement, confidence, and constructive
+            support can help people recognize their strengths and
+            take steps toward their goals.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✧</div>
+          <h3>Brand & Modeling Opportunities</h3>
+          <p>
+            We are developing our brand through photography, modeling,
+            creative storytelling, and collaborations that reflect
+            the Blossoms Legacy identity and values.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELING -->
+  <section class="section darksection" id="modeling">
+    <div class="wrap">
+
+      <div class="heading">
+        <div class="eyebrow">Our brand. Our creative journey.</div>
+        <h2>Blossoms Legacy Modeling & Brand Opportunities</h2>
+        <p>
+          Growing our brand. Building confidence. Creating opportunities.
+        </p>
+      </div>
+
+      <div class="models">
+
+        <article class="photocard">
+          <img
+            class="photo"
+            src="Model-1.jpg"
+            alt="Blossoms Legacy brand model photograph"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+
+          <div class="placeholder">
+            <div>
+              <strong>Our Brand Photography</strong>
+              Upload your first model photo and name it
+              <code>Model-1.jpg</code>.
+            </div>
+          </div>
+
+          <div class="caption">
+            <h3>Modeling for Our Own Brand</h3>
+            <p>
+              Our son is currently modeling specifically for Blossoms
+              Legacy as part of the vision we are building through
+              Heaven Created 2 BLOSSOM L.L.C.
+            </p>
+          </div>
+        </article>
+
+        <article class="photocard">
+          <img
+            class="photo"
+            src="https://raw.githubusercontent.com/BlossomsLegacy/Heaven-Created-2-BLOSSOM-LLC-BlossomsLegacy/main/Model%20%232.png"
+            alt="Blossoms Legacy model photograph"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+
+          <div class="placeholder">
+            <div>
+              <strong>Blossoms Legacy Model</strong>
+              Add your approved model photo to the repository to
+              display it here.
+            </div>
+          </div>
+
+          <div class="caption">
+            <h3>Creativity With Purpose</h3>
+            <p>
+              Our images and creative projects represent our brand,
+              our growth, and the confidence we hope to inspire.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="modelcopy">
+        <h3>Join Us as the Brand Grows</h3>
+
+        <p>
+          At Blossoms Legacy, our modeling journey is part of the vision
+          we are building through Heaven Created 2 BLOSSOM L.L.C.
+          Our son was hired by our business to model specifically for
+          our brand, representing the creativity, confidence, and
+          purpose behind what we are creating.
+        </p>
+
+        <p>
+          As Blossoms Legacy grows, we welcome inquiries from other
+          aspiring models who may be interested in participating in
+          future brand projects. We want to create opportunities for
+          people to express themselves, build confidence, and help
+          bring our brand's vision to life.
+        </p>
+
+        <div class="pills">
+          <span class="pill">Brand Photography</span>
+          <span class="pill">Aspiring Models</span>
+          <span class="pill">Creative Collaborations</span>
+          <span class="pill">Brand Partnerships</span>
+        </div>
+
+        <p class="fine">
+          Modeling participation depends on project needs, mutual
+          agreement, and applicable consent, privacy, and safety
+          requirements. For anyone under 18, participation must involve
+          a parent or legal guardian and appropriate safeguards.
+        </p>
+
+        <a
+          class="btn gold"
+          href="mailto:fountainroyal80@gmail.com?subject=Blossoms%20Legacy%20Modeling%20Inquiry">
+          Ask About Modeling
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPONSORS AND PARTNERS -->
+  <section class="section" id="partners">
+    <div class="wrap">
+
+      <div class="partner">
+        <div>
+          <div class="eyebrow" style="color:#9b702d">
+            Let's grow together
+          </div>
+
+          <h2>For sponsors, businesses, and community partners</h2>
+
+          <p>
+            We welcome conversations with people and organizations
+            who connect with our vision. If you are interested in
+            sponsoring a project, collaborating on a brand opportunity,
+            supporting community outreach, or discussing business
+            growth, we would love to hear from you.
+          </p>
+        </div>
+
+        <a
+          class="btn plum"
+          href="mailto:fountainroyal80@gmail.com?subject=Blossoms%20Legacy%20Partnership%20Inquiry">
+          Discuss a Partnership
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section darksection" id="contact">
+    <div class="wrap">
+
+      <div class="heading">
+        <div class="eyebrow">Start a conversation</div>
+        <h2>Connect with Blossoms Legacy</h2>
+        <p>
+          For business, modeling, photography, sponsorship, consulting,
+          and collaboration inquiries, please contact us directly.
+        </p>
+      </div>
+
+      <div class="contact">
+
+        <div class="panel">
+          <h3>Business Contact</h3>
+
+          <div class="line">
+            <span>Business / Brand</span>
+            <strong>Heaven Created 2 BLOSSOM L.L.C.</strong><br>
+            <strong>Blossoms Legacy</strong>
+          </div>
+
+          <div class="line">
+            <span>Email</span>
+            <a href="mailto:fountainroyal80@gmail.com">
+              fountainroyal80@gmail.com
+            </a>
+          </div>
+
+          <div class="line">
+            <span>Primary Phone</span>
+            <a href="tel:+14422253747">(442) 225-3747</a>
+          </div>
+
+          <div class="line">
+            <span>Additional Phone</span>
+            <a href="tel:+14424548009">(442) 454-8009</a>
+          </div>
+
+          <div class="contactactions">
+            <a class="btn gold" href="mailto:fountainroyal80@gmail.com">
+              Email Our Team
+            </a>
+            <a class="btn outline" href="tel:+14422253747">
+              Call Us
+            </a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Follow the Journey</h3>
+
+          <p class="note">
+            Follow along for family vlogs, our growth journey,
+            behind-the-scenes moments, creative projects, and the
+            goals we are working toward. Please use the business
+            contact details for formal brand, modeling, sponsorship,
+            and partnership inquiries.
+          </p>
+
+          <div class="socials">
+            <a
+              href="https://www.facebook.com/blossomslegacy33"
+              target="_blank"
+              rel="noopener noreferrer">
+              Facebook ↗
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@blossomslegacy"
+              target="_blank"
+              rel="noopener noreferrer">
+              TikTok @blossomslegacy ↗
+            </a>
+          </div>
+
+          <p class="fine" style="margin-top:24px">
+            We are building with intention and welcome respectful
+            conversations with people who share an interest in family,
+            creativity, community, and growth.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong>Blossoms Legacy</strong> · A brand by
+      Heaven Created 2 BLOSSOM L.L.C.
+    </div>
+
+    <div>
+      © <span id="year"></span>
+      Heaven Created 2 BLOSSOM L.L.C. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('site-menu');
+  const button = document.querySelector('.menu');
+  const open = menu.classList.toggle('open');
+  button.setAttribute('aria-expanded', String(open));
+}
+
+function closeMenu() {
+  document.getElementById('site-menu').classList.remove('open');
+  document.querySelector('.menu').setAttribute('aria-expanded', 'false');
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
