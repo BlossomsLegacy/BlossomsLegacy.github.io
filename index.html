@@ -1,507 +1,339 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blossoms Legacy | A Legacy in the Making</title>
-<meta name="description" content="Discover Blossoms Legacy, the public-facing brand of Heaven Created 2 BLOSSOM L.L.C. Explore our vision for families, community outreach, consulting, and business growth.">
-<meta name="theme-color" content="#061644">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAVEN CREATED 2 BLOSSOM L.L.C. | Blossoms Legacy</title>
+    <style>
+        /* CORE RESET & TYPOGRAPHY */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', 'Playfair Display', 'Helvetica Neue', serif;
+        }
 
-<style>
-:root{
-  --blue:#061644;
-  --blue2:#0b2b70;
-  --blue3:#1749a7;
-  --purple:#28104d;
-  --gold:#d8ad46;
-  --gold2:#fff0a3;
-  --cream:#fff9e9;
-  --white:#fff;
-  --ink:#111a35;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{
-  margin:0;color:var(--white);
-  font-family:Georgia,"Times New Roman",serif;
-  background:
-    radial-gradient(ellipse at 15% 15%,#193e91 0,transparent 36%),
-    radial-gradient(ellipse at 90% 40%,#301052 0,transparent 38%),
-    var(--blue);
-  line-height:1.75;
-}
-body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-  background-image:
-    radial-gradient(circle,#fff8cf 1px,transparent 1.7px),
-    radial-gradient(circle,#e8bd51 1px,transparent 2px),
-    radial-gradient(circle,#fff 1px,transparent 1.8px);
-  background-size:79px 91px,137px 121px,193px 173px;
-  background-position:8px 5px,51px 41px,90px 110px;
-  opacity:.32;
-}
-a{color:inherit}
-img{display:block;max-width:100%}
-.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-.gold{color:var(--gold2)}
-.kicker{
-  text-transform:uppercase;letter-spacing:.25em;
-  font:700 .72rem/1.8 Arial,sans-serif;color:var(--gold2)
-}
-h1,h2,h3,p{margin-top:0}
-h1,h2,h3{line-height:1.13;text-wrap:balance}
-h1{font-size:clamp(3rem,8vw,7rem);letter-spacing:-.045em;margin:15px 0}
-h2{font-size:clamp(2.2rem,5vw,4rem);margin-bottom:22px}
-h3{font-size:1.5rem}
-p{color:#e6eaf8}
-.section{padding:105px 0}
-.heading{text-align:center;max-width:780px;margin:0 auto 52px}
-.heading p{font-size:1.08rem}
-.rule{
-  width:115px;height:3px;margin:24px auto;
-  background:linear-gradient(90deg,transparent,#fff3a8,#b98721,#fff3a8,transparent);
-  box-shadow:0 0 18px #e9c65d99
-}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  min-height:50px;padding:13px 25px;border-radius:3px;
-  text-decoration:none;text-transform:uppercase;letter-spacing:.09em;
-  font:700 .75rem Arial,sans-serif;transition:.2s;
-}
-.btn-gold{
-  color:#161b38;border:1px solid #fff0a3;
-  background:linear-gradient(120deg,#fff3b0,#d9ae48 38%,#fff0a3 56%,#b88722);
-  box-shadow:0 0 22px #e5bd5740,inset 0 1px #fff9dc;
-}
-.btn-outline{border:1px solid #e5c15d;color:#fff0a3;background:#07194488}
-.btn:hover{transform:translateY(-3px);box-shadow:0 0 27px #f0cf725e}
-.btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
-.center{text-align:center}
-.top{
-  position:sticky;top:0;z-index:20;
-  background:#040e2aeF;backdrop-filter:blur(14px);
-  border-bottom:1px solid #d6b34c88
-}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:61px;height:61px;object-fit:contain;filter:drop-shadow(0 0 10px #f2d16d70)}
-.brand strong{display:block;color:var(--gold2);font-size:1.18rem;line-height:1.2}
-.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.12em;color:#d9e2ff;margin-top:5px}
-.navlinks{display:flex;gap:21px;align-items:center;font:12px Arial,sans-serif}
-.navlinks a{text-decoration:none;color:#f4f4ff}
-.navlinks a:hover{color:var(--gold2)}
-.hero{
-  min-height:770px;display:flex;align-items:center;justify-content:center;
-  text-align:center;position:relative;isolation:isolate;overflow:hidden;
-  padding:65px 0 90px;
-}
-.hero:before{
-  content:"";position:absolute;inset:18px 2.5% 25px;z-index:-1;
-  border:1px solid #e2bd6066;
-  background:
-    radial-gradient(ellipse at center 20%,#254da04a,transparent 55%),
-    linear-gradient(135deg,#071b50d9,#1d0a40e8);
-  box-shadow:inset 0 0 100px #010a28a8,0 0 50px #040b2580;
-}
-.hero:after{
-  content:"";position:absolute;inset:30px 4%;z-index:-1;pointer-events:none;
-  border-top:1px solid #fff0a344;border-bottom:1px solid #fff0a344;
-}
-.hero-inner{max-width:970px;padding:15px}
-.hero-logo{
-  width:min(310px,65vw);height:auto;max-height:300px;object-fit:contain;
-  margin:0 auto 22px;
-  filter:drop-shadow(0 0 13px #f9d873aa) drop-shadow(0 0 35px #dfb43a55);
-}
-.hero h1{
-  background:linear-gradient(180deg,#fffce9 4%,#ffe78b 26%,#d4a53a 48%,#fff3b0 64%,#c18b27 80%,#fff2a6);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 5px 14px #0008)
-}
-.hero-lead{max-width:760px;margin:0 auto;font-size:clamp(1.05rem,2.4vw,1.3rem);color:#f0f2ff}
-.hero-line{color:var(--gold2);font-style:italic;font-size:1.25rem;margin-top:22px}
-.hero .btn-row{justify-content:center}
-.hero-foot{margin-top:38px;font:11px Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#dce5ff}
-.intro{
-  background:linear-gradient(125deg,#fffaf0,#f1e2bd);
-  color:var(--ink);padding:76px 0;
-  border-block:1px solid #d9b650;
-}
-.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
-.intro .kicker{color:#805c18}
-.intro h2{color:#09235d}
-.intro p{color:#3c455c}
-.intro-art{
-  padding:38px;text-align:center;
-  background:linear-gradient(145deg,#09235f,#28104d);
-  border:1px solid #d8b44d;box-shadow:0 18px 40px #07143d26;
-  position:relative
-}
-.intro-art:before{content:"✦";display:block;font-size:2rem;color:#ffeb9c}
-.intro-art blockquote{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.3;margin:16px 0;color:#fff0ac}
-.intro-art p{color:#e2e7ff;font-style:italic}
-.services{background:linear-gradient(180deg,#071943,#091d51 65%,#160c38)}
-.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#c8a44d66;border:1px solid #c8a44d66}
-.service{
-  padding:36px;background:linear-gradient(145deg,#0c2a6b,#180b3e);
-  min-height:240px;position:relative
-}
-.service:before{content:"";display:block;width:52px;height:2px;background:linear-gradient(90deg,#fff1a6,#b78324);margin-bottom:22px;box-shadow:0 0 13px #edca66}
-.service h3{color:#ffeb9c}
-.service p{margin-bottom:0}
-.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
-.story-emblem{
-  min-height:390px;display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(ellipse,#163f92,#081742 70%);
-  border:1px solid #d4ae4d;position:relative;padding:28px
-}
-.story-emblem:before,.story-emblem:after{
-  content:"";position:absolute;inset:14px;border:1px solid #e3c3696b;pointer-events:none
-}
-.story-emblem img{width:min(330px,100%);max-height:340px;object-fit:contain;filter:drop-shadow(0 0 20px #e4bd626b)}
-.story-copy h2{color:#ffeb9c}
-.story-copy p{font-size:1.06rem}
-.feature{
-  display:grid;grid-template-columns:1fr 1fr;align-items:stretch;
-  border:1px solid #d6b34d;background:#0b245e;
-  box-shadow:0 20px 55px #0003
-}
-.feature-image{min-height:430px;padding:18px;background:#170d3b}
-.feature-image img{width:100%;height:100%;min-height:390px;max-height:600px;object-fit:cover;border:1px solid #e2c369}
-.feature-copy{padding:clamp(30px,5vw,58px);align-self:center}
-.feature-copy h2{color:#ffe99b}
-.partners{background:linear-gradient(130deg,#0b2b70,#211044);border-block:1px solid #d5b14b66}
-.partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
-.partner{padding:25px 20px;border-top:2px solid #dfbb56;background:#0719427a}
-.partner h3{color:#ffe8a0;font-size:1.3rem}
-.partner p{font-size:.96rem;margin-bottom:0}
-.social-section{background:#fff9e9;color:#142047}
-.social-section h2{color:#0b245f}
-.social-section p{color:#444c60}
-.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}
-.social-card{padding:30px;border:1px solid #d7b452;background:white;color:#13204a}
-.social-card h3{color:#122d70}
-.social-card a{color:#593c91;font-weight:bold;text-underline-offset:4px}
-.invitation{
-  padding:95px 0;text-align:center;
-  background:
-    radial-gradient(ellipse at center,#1b438e80,transparent 65%),
-    linear-gradient(130deg,#071943,#1b0a3d);
-  border-top:1px solid #d6b34d
-}
-.invitation-inner{max-width:820px;margin:auto}
-.invitation h2{color:#ffe9a0}
-.invitation p{font-size:1.08rem}
-.contact-line{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 28px;margin:28px 0}
-.contact-line a{color:#fff0a3;text-underline-offset:5px}
-footer{padding:30px 0;text-align:center;background:#030b22;border-top:1px solid #d3ae4a66}
-footer p{font-size:.84rem;margin:5px;color:#d9e0f6}
-footer strong{color:#ffe69a;font-size:1.1rem}
-@media(max-width:800px){
- .nav{padding:12px 0;flex-direction:column}
- .navlinks{justify-content:center;flex-wrap:wrap;gap:13px}
- .intro-grid,.story-grid,.feature{grid-template-columns:1fr}
- .partner-grid{grid-template-columns:1fr}
- .hero{min-height:650px}
- .intro-art{padding:28px}
-}
-@media(max-width:520px){
- .wrap{width:calc(100% - 26px)}
- .section{padding:70px 0}
- .hero{padding:42px 0 60px;min-height:0}
- .hero:before{inset:8px 0 15px}
- .hero-logo{width:min(250px,75vw)}
- .service-grid,.social-grid{grid-template-columns:1fr}
- .service{min-height:0;padding:28px}
- .feature-image{min-height:290px}
- .feature-image img{min-height:260px}
- .btn-row{flex-direction:column}
- .btn{width:100%}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+        :root {
+            --royal-blue: #000B26;
+            --deep-navy: #04143a;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA7C11;
+            --text-pure: #FFFFFF;
+            --text-muted: #E0E6ED;
+        }
+
+        body {
+            background-color: var(--royal-blue);
+            color: var(--text-pure);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* PRESTIGIOUS PAGE ACCENT BORDERS */
+        .page-border {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .brand-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-primary), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-left: 35px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* CINEMATIC HERO ZONE */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 40px;
+            position: relative;
+            background: radial-gradient(circle at center, var(--deep-navy) 0%, var(--royal-blue) 70%);
+        }
+
+        .logo-container {
+            margin-bottom: 35px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .logo-image {
+            width: 160px;
+            height: auto;
+            filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.4));
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero-headline {
+            font-size: 3.8rem;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            max-width: 1100px;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+        }
+
+        .hero-headline span {
+            display: block;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFF, var(--gold-light), var(--gold-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 12px;
+        }
+
+        /* SPONSOR ENGAGEMENT BUTTONS */
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            z-index: 5;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--royal-blue);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 18px 40px;
+            background: transparent;
+            color: var(--text-pure);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--gold-primary);
+            color: var(--gold-light);
+        }
+
+        /* CORPORATE BRAND MODEL VISUAL SHOWCASE */
+        .model-showcase-section {
+            padding: 120px 40px;
+            background-color: var(--royal-blue);
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .section-title {
+            color: var(--gold-primary);
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        .model-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .model-card {
+            background: var(--deep-navy);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 25px;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .model-img {
+            width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .model-caption {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        /* STRATEGIC MISSION INTENTION SECTION */
+        .vision-section {
+            padding: 140px 80px;
+            background-color: var(--deep-navy);
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            display: flex;
+            justify-content: center;
+        }
+
+        .vision-container {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .vision-text-block h2 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            color: var(--gold-primary);
+        }
+
+        .vision-text-block p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .vision-accent-box {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 50px;
+            background: rgba(0, 11, 38, 0.4);
+            position: relative;
+        }
+
+        .vision-accent-box::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid var(--gold-primary);
+            border-left: 2px solid var(--gold-primary);
+        }
+
+        .vision-accent-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--text-pure);
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 968px) {
+            header { left: 40px; right: 40px; }
+            .hero-headline { font-size: 2.5rem; }
+            .vision-container { grid-template-columns: 1fr; gap: 40px; }
+            .vision-section { padding: 80px 40px; }
+        }
+    </style>
 </head>
-
 <body>
-<header class="top">
-  <div class="wrap nav">
-    <a class="brand" href="#home">
-      <img src="Golden%20Blossoms%20Legacy%20Crown%20Emblem%20(1).png" alt="Blossoms Legacy crown emblem">
-      <span>
-        <strong>Blossoms Legacy</strong>
-        <small>PURPOSE · GROWTH · LEGACY</small>
-      </span>
-    </a>
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#story">Our Story</a>
-      <a href="#services">Our Work</a>
-      <a href="#vision">Our Vision</a>
-      <a href="#journey">Our Journey</a>
-      <a href="#contact">Connect</a>
-    </nav>
-  </div>
-</header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="kicker">Heaven Created 2 BLOSSOM L.L.C.</div>
-      <img class="hero-logo"
-        src="Golden%20Blossoms%20Legacy%20Crown%20Emblem%20(1).png"
-        alt="The Blossoms Legacy crown emblem">
-      <div class="kicker">Introducing</div>
-      <h1>Blossoms Legacy</h1>
-      <div class="rule"></div>
-      <p class="hero-lead">
-        A vision rooted in purpose, shaped by perseverance, and built around
-        the possibilities that emerge when families, communities, and
-        businesses are given room to grow.
-      </p>
-      <p class="hero-line">Our beginning did not limit our becoming.</p>
-      <div class="btn-row">
-        <a class="btn btn-gold" href="#story">Discover Our Story</a>
-        <a class="btn btn-outline" href="#services">Explore Our Work</a>
-      </div>
-      <div class="hero-foot">Family · Community · Business · Possibility</div>
-    </div>
-  </section>
+    <div class="page-border"></div>
 
-  <section class="intro" id="story">
-    <div class="wrap intro-grid">
-      <div>
-        <div class="kicker">The story behind the legacy</div>
-        <h2>We Believe Growth Can Begin Anywhere.</h2>
-        <p>
-          Heaven Created 2 BLOSSOM L.L.C. is the business behind Blossoms
-          Legacy, our public-facing brand. Our story is about believing in
-          possibility, continuing to grow, and building something that can
-          reach beyond where it began.
-        </p>
-        <p>
-          We are developing a vision that brings together childcare,
-          community outreach, consulting, and collaboration with businesses.
-          Each represents a different way to create connections, open doors,
-          and encourage meaningful progress.
-        </p>
-        <p>
-          We want people to see more than a name. We want them to understand
-          the purpose behind it and the future we are working to create.
-        </p>
-      </div>
-      <aside class="intro-art">
-        <blockquote>“We started from nothing, and now we are something.”</blockquote>
-        <div class="rule"></div>
-        <p>A journey of resilience. A vision for growth. A legacy still unfolding.</p>
-      </aside>
-    </div>
-  </section>
+    <header>
+        <div class="brand-title">Blossoms Legacy</div>
+        <nav>
+            <a href="#story">Our Story</a>
+            <a href="#work">Our Work</a>
+            <a href="#representation">Representation</a>
+            <a href="#connect">Connect</a>
+        </nav>
+    </header>
 
-  <section class="section services" id="services">
-    <div class="wrap">
-      <div class="heading">
-        <div class="kicker">Purpose in action</div>
-        <h2>What We Stand to Build</h2>
-        <div class="rule"></div>
-        <p>
-          Our vision connects people, resources, and opportunities across
-          several areas of work. These are the foundations of the legacy
-          we are working toward.
-        </p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service">
-          <h3>Childcare & Family Support</h3>
-          <p>
-            We value care, encouragement, and environments where children
-            and families can feel supported. Our vision places families
-            and their potential at the heart of community growth.
-          </p>
-        </article>
-        <article class="service">
-          <h3>Community Outreach</h3>
-          <p>
-            Strong communities grow through connection. We aim to build
-            relationships, recognize needs, and explore ways to connect
-            people with resources and meaningful opportunities.
-          </p>
-        </article>
-        <article class="service">
-          <h3>Consulting & Business Growth</h3>
-          <p>
-            We believe businesses can become more than they are today.
-            Through collaboration and consulting, we want to help identify
-            opportunities, strengthen direction, and explore new possibilities.
-          </p>
-        </article>
-        <article class="service">
-          <h3>Partnership & Collaboration</h3>
-          <p>
-            We welcome relationships with organizations, entrepreneurs,
-            community-minded individuals, and businesses whose goals align
-            with growth, service, and long-term impact.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="vision">
-    <div class="wrap story-grid">
-      <div class="story-emblem">
-        <img src="Golden%20Blossoms%20Legacy%20Crown%20Emblem%20(1).png"
-          alt="Blossoms Legacy crown symbol">
-      </div>
-      <div class="story-copy">
-        <div class="kicker">The vision beyond today</div>
-        <h2>Not Just Where We Are. <span class="gold">Where We Can Go.</span></h2>
-        <p>
-          Blossoms Legacy is about possibility: the potential within families,
-          the strength of community connections, and the room businesses have
-          to evolve and expand.
-        </p>
-        <p>
-          We want to grow relationships that are built on shared purpose,
-          clear communication, and a genuine interest in creating something
-          meaningful. Our next chapter will be shaped by the work we do,
-          the people we connect with, and the opportunities we build together.
-        </p>
-        <p>
-          A legacy is not created in a single moment. It takes vision,
-          persistence, learning, and people willing to help move an idea forward.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="journey">
-    <div class="wrap">
-      <div class="feature">
-        <div class="feature-image">
-          <img src="Model%20%232.png"
-            alt="Blossoms Legacy growth and future vision"
-            loading="lazy">
+    <section class="hero-section">
+        <div class="logo-container">
+            <!-- Linked directly to your primary crown asset file from your repository root -->
+            <img src="Golden Blossoms Legacy Crown Emblem (1).png" alt="Blossoms Legacy Crown" class="logo-image">
         </div>
-        <div class="feature-copy">
-          <div class="kicker">A vision still unfolding</div>
-          <h2>There Is More to the Story.</h2>
-          <p>
-            Every journey has chapters that cannot be captured in a single
-            photograph or a few words. Our story continues as we learn,
-            build, connect, and work toward what comes next.
-          </p>
-          <p>
-            We believe the journey matters as much as the destination.
-            Blossoms Legacy is growing, and we invite you to learn about
-            the vision, the work, and the people behind it.
-          </p>
-          <div class="btn-row">
-            <a class="btn btn-gold" href="#connect">Follow the Journey</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section partners">
-    <div class="wrap">
-      <div class="heading">
-        <div class="kicker">What becomes possible together</div>
-        <h2>Built Through Connection.</h2>
-        <div class="rule"></div>
-        <p>
-          Meaningful growth often happens when people bring different
-          strengths to a shared vision. We want to create space for
-          relationships that help ideas develop into action.
-        </p>
-      </div>
-      <div class="partner-grid">
-        <article class="partner">
-          <h3>Families & Community</h3>
-          <p>Connections grounded in care, opportunity, and a stronger community.</p>
-        </article>
-        <article class="partner">
-          <h3>Businesses & Organizations</h3>
-          <p>Shared ideas, professional collaboration, and room for growth.</p>
-        </article>
-        <article class="partner">
-          <h3>Sponsors & Vision Partners</h3>
-          <p>Relationships with people who want to help meaningful work develop and grow.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section social-section" id="connect">
-    <div class="wrap">
-      <div class="heading">
-        <div class="kicker">Beyond the business</div>
-        <h2>Come Along for the Journey.</h2>
-        <div class="rule"></div>
-        <p>
-          Our social channels offer a more personal window into the journey
-          behind Blossoms Legacy—life, experiences, lessons, and growth along
-          the way. Follow along if you'd like to see the story continue beyond
-          this website.
-        </p>
-      </div>
-      <div class="social-grid">
-        <article class="social-card">
-          <h3>Facebook</h3>
-          <p>Follow our personal journey, experiences, and moments along the way.</p>
-          <a href="https://www.facebook.com/blossomslegacy33" target="_blank" rel="noopener noreferrer">
-            Visit Facebook ↗
-          </a>
-        </article>
-        <article class="social-card">
-          <h3>TikTok</h3>
-          <p>Watch the journey unfold through videos, everyday life, and continued growth.</p>
-          <a href="https://www.tiktok.com/@blossomslegacy" target="_blank" rel="noopener noreferrer">
-            Visit TikTok ↗
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="invitation" id="contact">
-    <div class="wrap invitation-inner">
-      <div class="kicker">The next chapter is built together</div>
-      <h2>Could Your Vision Grow Alongside Ours?</h2>
-      <div class="rule"></div>
-      <p>
-        If our story, our purpose, or the possibilities behind our work
-        connect with you, we welcome a conversation. Whether you're exploring
-        a partnership, business collaboration, sponsorship, or a way to
-        support our developing vision, we'd be glad to hear from you.
-      </p>
-      <p class="gold">Every meaningful connection starts with a conversation.</p>
-      <div class="contact-line">
-        <a href="mailto:fountainroyal80@gmail.com">fountainroyal80@gmail.com</a>
-        <a href="tel:+14422253747">(442) 225-3747</a>
-        <a href="tel:+14424548009">(442) 454-8009</a>
-      </div>
-      <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-gold" href="mailto:fountainroyal80@gmail.com?subject=Blossoms%20Legacy%20Partnership">
-          Start a Conversation
-        </a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <p><strong>Blossoms Legacy</strong></p>
-    <p>Heaven Created 2 BLOSSOM L.L.C. · Public-facing brand: Blossoms Legacy</p>
-    <p>Purpose. Growth. Community. A legacy in the making.</p>
-    <p>© <span id="year"></span> Heaven Created 2 BLOSSOM L.L.C.</p>
-  </div>
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+        
+        <p class="hero-tagline">HEAVEN CREATED 2 BLOSSOM L.L.C.</p>
+        
+        <h1 class="hero-headline">
+            Heaven has literally touched Earth,
+            <span>And everything meant to flourish is here.</span>
+        </h1>
